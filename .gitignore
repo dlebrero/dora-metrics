@@ -1,0 +1,5 @@
+.idea
+backend/logs
+backend/.nrepl-port
+backend/*.iml
+backend/target

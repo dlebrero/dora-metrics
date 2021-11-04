@@ -1,0 +1,1372 @@
+21-10-27 21:28:23 0dcdcc932ba0 REPORT [duct.migrator.ragtime:14] - :duct.migrator.ragtime/applying 00001-commits
+21-10-27 21:28:24 0dcdcc932ba0 REPORT [duct.migrator.ragtime:14] - :duct.migrator.ragtime/applying 00002-promotions
+21-10-27 21:28:24 0dcdcc932ba0 REPORT [duct.migrator.ragtime:14] - :duct.migrator.ragtime/applying 00003-flips
+21-10-27 21:28:24 0dcdcc932ba0 REPORT [duct.migrator.ragtime:14] - :duct.migrator.ragtime/applying 00004-http-codes
+21-10-27 21:28:24 0dcdcc932ba0 INFO [akvo-devops-stats.cron-jobs:35] - :duct.logger.timbre/legacy ["Starting cron job to collect stats"]
+21-10-27 21:28:24 0dcdcc932ba0 REPORT [duct.server.http.jetty:13] - :duct.server.http.jetty/starting-server {:port 3000}
+21-10-27 21:28:25 0dcdcc932ba0 ERROR [akvo-devops-stats.cron-jobs:?] - :duct.logger.timbre/legacy []
+                                                    [37mjava.lang.Thread.run[m  [32m                     Thread.java:  834[m
+                      [37mjava.util.concurrent.ThreadPoolExecutor$Worker.run[m  [32m         ThreadPoolExecutor.java:  628[m
+                       [37mjava.util.concurrent.ThreadPoolExecutor.runWorker[m  [32m         ThreadPoolExecutor.java: 1128[m
+[37mjava.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run[m  [32mScheduledThreadPoolExecutor.java:  305[m
+                             [37mjava.util.concurrent.FutureTask.runAndReset[m  [32m                 FutureTask.java:  305[m
+                     [37mjava.util.concurrent.Executors$RunnableAdapter.call[m  [32m                  Executors.java:  515[m
+                                                                     [37m...[m  [32m                                      [m
+                             [33makvo-devops-stats.cron-jobs/eval19028/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   39[m
+                          [33makvo-devops-stats.cron-jobs/eval19028/fn/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   40[m
+                                [33makvo-devops-stats.cron-jobs/[1;33mcollect-data[m  [32m                   cron_jobs.clj:   27[m
+                 [33makvo-devops-stats.promotions/[1;33mcollect-all-new-promotions[m  [32m                  promotions.clj:   89[m
+                 [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions-up-to[m  [32m                  promotions.clj:   66[m
+                       [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions[m  [32m                  promotions.clj:   43[m
+                           [33makvo-devops-stats.promotions/[1;33mfetch-promotions[m  [32m                  promotions.clj:   22[m
+                               [33makvo-devops-stats.promotions/[1;33mquery-github[m  [32m                  promotions.clj:   15[m
+                                                                     [37m...[m  [32m                                      [m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1187[m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1191[m
+                                                [33mclj-http.client/[1;33mrequest*[m  [32m                      client.clj: 1173[m
+                                    [33mclj-http.client/wrap-unknown-host/[1;33mfn[m  [32m                      client.clj: 1045[m
+                                            [33mclj-http.links/wrap-links/[1;33mfn[m  [32m                       links.clj:   63[m
+                                        [33mclj-http.cookies/wrap-cookies/[1;33mfn[m  [32m                     cookies.clj:  131[m
+                                          [33mclj-http.client/wrap-method/[1;33mfn[m  [32m                      client.clj:  892[m
+                           [33mclj-http.client/wrap-flatten-nested-params/[1;33mfn[m  [32m                      client.clj: 1016[m
+                                   [33mclj-http.client/wrap-nested-params/[1;33mfn[m  [32m                      client.clj:  992[m
+                                     [33mclj-http.client/wrap-form-params/[1;33mfn[m  [32m                      client.clj:  958[m
+                                    [33mclj-http.client/wrap-content-type/[1;33mfn[m  [32m                      client.clj:  717[m
+                                 [33mclj-http.client/wrap-accept-encoding/[1;33mfn[m  [32m                      client.clj:  756[m
+                                          [33mclj-http.client/wrap-accept/[1;33mfn[m  [32m                      client.clj:  734[m
+                                      [33mclj-http.client/wrap-exceptions/[1;33mfn[m  [32m                      client.clj:  262[m
+                                     [33mclj-http.client/[1;33mexceptions-response[m  [32m                      client.clj:  253[m
+                                           [33mslingshot.support/[1;33mstack-trace[m  [32m                     support.clj:  201[m
+[1;31mclojure.lang.ExceptionInfo[m: [3mclj-http: status 401[m
+                     [1mbody[m: "{\"message\":\"Bad credentials\",\"documentation_url\":\"https://docs.github.com/graphql\"}"
+                   [1mcached[m: nil
+                 [1mchunked?[m: false
+                  [1mheaders[m: {"Access-Control-Expose-Headers"
+                            "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+                            "Referrer-Policy"
+                            "origin-when-cross-origin, strict-origin-when-cross-origin",
+                            "Server" "GitHub.com",
+                            "Content-Type" "application/json; charset=utf-8",
+                            "Access-Control-Allow-Origin" "*",
+                            "X-Content-Type-Options" "nosniff",
+                            "Content-Length" "83",
+                            "X-Frame-Options" "deny",
+                            "Strict-Transport-Security"
+                            "max-age=31536000; includeSubdomains; preload",
+                            "X-RateLimit-Limit" "0",
+                            ...}
+              [1mhttp-client[m: #object[org.apache.http.impl.client.InternalHttpClient 0x5bcf5595 "org.apache.http.impl.client.InternalHttpClient@5bcf5595"]
+                   [1mlength[m: 83
+    [1morig-content-encoding[m: nil
+         [1mprotocol-version[m: {:name "HTTP", :major 1, :minor 1}
+            [1mreason-phrase[m: "Unauthorized"
+              [1mrepeatable?[m: false
+             [1mrequest-time[m: 1312
+                   [1mstatus[m: 401
+               [1mstreaming?[m: true
+          [1mtrace-redirects[m: []
+                     [1mtype[m: :clj-http.client/unexceptional-status
+
+21-10-28 21:26:49 0dcdcc932ba0 ERROR [akvo-devops-stats.cron-jobs:?] - :duct.logger.timbre/legacy []
+                                                    [37mjava.lang.Thread.run[m  [32m                     Thread.java:  834[m
+                      [37mjava.util.concurrent.ThreadPoolExecutor$Worker.run[m  [32m         ThreadPoolExecutor.java:  628[m
+                       [37mjava.util.concurrent.ThreadPoolExecutor.runWorker[m  [32m         ThreadPoolExecutor.java: 1128[m
+[37mjava.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run[m  [32mScheduledThreadPoolExecutor.java:  305[m
+                             [37mjava.util.concurrent.FutureTask.runAndReset[m  [32m                 FutureTask.java:  305[m
+                     [37mjava.util.concurrent.Executors$RunnableAdapter.call[m  [32m                  Executors.java:  515[m
+                                                                     [37m...[m  [32m                                      [m
+                             [33makvo-devops-stats.cron-jobs/eval19028/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   39[m
+                          [33makvo-devops-stats.cron-jobs/eval19028/fn/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   40[m
+                                [33makvo-devops-stats.cron-jobs/[1;33mcollect-data[m  [32m                   cron_jobs.clj:   27[m
+                 [33makvo-devops-stats.promotions/[1;33mcollect-all-new-promotions[m  [32m                  promotions.clj:   89[m
+                 [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions-up-to[m  [32m                  promotions.clj:   66[m
+                       [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions[m  [32m                  promotions.clj:   43[m
+                           [33makvo-devops-stats.promotions/[1;33mfetch-promotions[m  [32m                  promotions.clj:   22[m
+                               [33makvo-devops-stats.promotions/[1;33mquery-github[m  [32m                  promotions.clj:   15[m
+                                                                     [37m...[m  [32m                                      [m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1187[m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1191[m
+                                                [33mclj-http.client/[1;33mrequest*[m  [32m                      client.clj: 1173[m
+                                    [33mclj-http.client/wrap-unknown-host/[1;33mfn[m  [32m                      client.clj: 1045[m
+                                            [33mclj-http.links/wrap-links/[1;33mfn[m  [32m                       links.clj:   63[m
+                                        [33mclj-http.cookies/wrap-cookies/[1;33mfn[m  [32m                     cookies.clj:  131[m
+                                          [33mclj-http.client/wrap-method/[1;33mfn[m  [32m                      client.clj:  892[m
+                           [33mclj-http.client/wrap-flatten-nested-params/[1;33mfn[m  [32m                      client.clj: 1016[m
+                                   [33mclj-http.client/wrap-nested-params/[1;33mfn[m  [32m                      client.clj:  992[m
+                                     [33mclj-http.client/wrap-form-params/[1;33mfn[m  [32m                      client.clj:  958[m
+                                    [33mclj-http.client/wrap-content-type/[1;33mfn[m  [32m                      client.clj:  717[m
+                                 [33mclj-http.client/wrap-accept-encoding/[1;33mfn[m  [32m                      client.clj:  756[m
+                                          [33mclj-http.client/wrap-accept/[1;33mfn[m  [32m                      client.clj:  734[m
+                                      [33mclj-http.client/wrap-exceptions/[1;33mfn[m  [32m                      client.clj:  262[m
+                                     [33mclj-http.client/[1;33mexceptions-response[m  [32m                      client.clj:  253[m
+                                           [33mslingshot.support/[1;33mstack-trace[m  [32m                     support.clj:  201[m
+[1;31mclojure.lang.ExceptionInfo[m: [3mclj-http: status 401[m
+                     [1mbody[m: "{\"message\":\"Bad credentials\",\"documentation_url\":\"https://docs.github.com/graphql\"}"
+                   [1mcached[m: nil
+                 [1mchunked?[m: false
+                  [1mheaders[m: {"Access-Control-Expose-Headers"
+                            "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+                            "Referrer-Policy"
+                            "origin-when-cross-origin, strict-origin-when-cross-origin",
+                            "Server" "GitHub.com",
+                            "Content-Type" "application/json; charset=utf-8",
+                            "Access-Control-Allow-Origin" "*",
+                            "X-Content-Type-Options" "nosniff",
+                            "Content-Length" "83",
+                            "X-Frame-Options" "deny",
+                            "Strict-Transport-Security"
+                            "max-age=31536000; includeSubdomains; preload",
+                            "X-RateLimit-Limit" "0",
+                            ...}
+              [1mhttp-client[m: #object[org.apache.http.impl.client.InternalHttpClient 0x6cd1a23f "org.apache.http.impl.client.InternalHttpClient@6cd1a23f"]
+                   [1mlength[m: 83
+    [1morig-content-encoding[m: nil
+         [1mprotocol-version[m: {:name "HTTP", :major 1, :minor 1}
+            [1mreason-phrase[m: "Unauthorized"
+              [1mrepeatable?[m: false
+             [1mrequest-time[m: 280
+                   [1mstatus[m: 401
+               [1mstreaming?[m: true
+          [1mtrace-redirects[m: []
+                     [1mtype[m: :clj-http.client/unexceptional-status
+
+21-10-29 21:25:12 0dcdcc932ba0 ERROR [akvo-devops-stats.cron-jobs:?] - :duct.logger.timbre/legacy []
+                                                    [37mjava.lang.Thread.run[m  [32m                     Thread.java:  834[m
+                      [37mjava.util.concurrent.ThreadPoolExecutor$Worker.run[m  [32m         ThreadPoolExecutor.java:  628[m
+                       [37mjava.util.concurrent.ThreadPoolExecutor.runWorker[m  [32m         ThreadPoolExecutor.java: 1128[m
+[37mjava.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run[m  [32mScheduledThreadPoolExecutor.java:  305[m
+                             [37mjava.util.concurrent.FutureTask.runAndReset[m  [32m                 FutureTask.java:  305[m
+                     [37mjava.util.concurrent.Executors$RunnableAdapter.call[m  [32m                  Executors.java:  515[m
+                                                                     [37m...[m  [32m                                      [m
+                             [33makvo-devops-stats.cron-jobs/eval19028/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   39[m
+                          [33makvo-devops-stats.cron-jobs/eval19028/fn/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   40[m
+                                [33makvo-devops-stats.cron-jobs/[1;33mcollect-data[m  [32m                   cron_jobs.clj:   27[m
+                 [33makvo-devops-stats.promotions/[1;33mcollect-all-new-promotions[m  [32m                  promotions.clj:   89[m
+                 [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions-up-to[m  [32m                  promotions.clj:   66[m
+                       [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions[m  [32m                  promotions.clj:   43[m
+                           [33makvo-devops-stats.promotions/[1;33mfetch-promotions[m  [32m                  promotions.clj:   22[m
+                               [33makvo-devops-stats.promotions/[1;33mquery-github[m  [32m                  promotions.clj:   15[m
+                                                                     [37m...[m  [32m                                      [m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1187[m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1191[m
+                                                [33mclj-http.client/[1;33mrequest*[m  [32m                      client.clj: 1173[m
+                                    [33mclj-http.client/wrap-unknown-host/[1;33mfn[m  [32m                      client.clj: 1045[m
+                                            [33mclj-http.links/wrap-links/[1;33mfn[m  [32m                       links.clj:   63[m
+                                        [33mclj-http.cookies/wrap-cookies/[1;33mfn[m  [32m                     cookies.clj:  131[m
+                                          [33mclj-http.client/wrap-method/[1;33mfn[m  [32m                      client.clj:  892[m
+                           [33mclj-http.client/wrap-flatten-nested-params/[1;33mfn[m  [32m                      client.clj: 1016[m
+                                   [33mclj-http.client/wrap-nested-params/[1;33mfn[m  [32m                      client.clj:  992[m
+                                     [33mclj-http.client/wrap-form-params/[1;33mfn[m  [32m                      client.clj:  958[m
+                                    [33mclj-http.client/wrap-content-type/[1;33mfn[m  [32m                      client.clj:  717[m
+                                 [33mclj-http.client/wrap-accept-encoding/[1;33mfn[m  [32m                      client.clj:  756[m
+                                          [33mclj-http.client/wrap-accept/[1;33mfn[m  [32m                      client.clj:  734[m
+                                      [33mclj-http.client/wrap-exceptions/[1;33mfn[m  [32m                      client.clj:  262[m
+                                     [33mclj-http.client/[1;33mexceptions-response[m  [32m                      client.clj:  253[m
+                                           [33mslingshot.support/[1;33mstack-trace[m  [32m                     support.clj:  201[m
+[1;31mclojure.lang.ExceptionInfo[m: [3mclj-http: status 401[m
+                     [1mbody[m: "{\"message\":\"Bad credentials\",\"documentation_url\":\"https://docs.github.com/graphql\"}"
+                   [1mcached[m: nil
+                 [1mchunked?[m: false
+                  [1mheaders[m: {"Access-Control-Expose-Headers"
+                            "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+                            "Referrer-Policy"
+                            "origin-when-cross-origin, strict-origin-when-cross-origin",
+                            "Server" "GitHub.com",
+                            "Content-Type" "application/json; charset=utf-8",
+                            "Access-Control-Allow-Origin" "*",
+                            "X-Content-Type-Options" "nosniff",
+                            "Content-Length" "83",
+                            "X-Frame-Options" "deny",
+                            "Strict-Transport-Security"
+                            "max-age=31536000; includeSubdomains; preload",
+                            "X-RateLimit-Limit" "0",
+                            ...}
+              [1mhttp-client[m: #object[org.apache.http.impl.client.InternalHttpClient 0x639d8db2 "org.apache.http.impl.client.InternalHttpClient@639d8db2"]
+                   [1mlength[m: 83
+    [1morig-content-encoding[m: nil
+         [1mprotocol-version[m: {:name "HTTP", :major 1, :minor 1}
+            [1mreason-phrase[m: "Unauthorized"
+              [1mrepeatable?[m: false
+             [1mrequest-time[m: 292
+                   [1mstatus[m: 401
+               [1mstreaming?[m: true
+          [1mtrace-redirects[m: []
+                     [1mtype[m: :clj-http.client/unexceptional-status
+
+21-10-30 21:23:35 0dcdcc932ba0 ERROR [akvo-devops-stats.cron-jobs:?] - :duct.logger.timbre/legacy []
+                                                    [37mjava.lang.Thread.run[m  [32m                     Thread.java:  834[m
+                      [37mjava.util.concurrent.ThreadPoolExecutor$Worker.run[m  [32m         ThreadPoolExecutor.java:  628[m
+                       [37mjava.util.concurrent.ThreadPoolExecutor.runWorker[m  [32m         ThreadPoolExecutor.java: 1128[m
+[37mjava.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run[m  [32mScheduledThreadPoolExecutor.java:  305[m
+                             [37mjava.util.concurrent.FutureTask.runAndReset[m  [32m                 FutureTask.java:  305[m
+                     [37mjava.util.concurrent.Executors$RunnableAdapter.call[m  [32m                  Executors.java:  515[m
+                                                                     [37m...[m  [32m                                      [m
+                             [33makvo-devops-stats.cron-jobs/eval19028/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   39[m
+                          [33makvo-devops-stats.cron-jobs/eval19028/fn/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   40[m
+                                [33makvo-devops-stats.cron-jobs/[1;33mcollect-data[m  [32m                   cron_jobs.clj:   27[m
+                 [33makvo-devops-stats.promotions/[1;33mcollect-all-new-promotions[m  [32m                  promotions.clj:   89[m
+                 [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions-up-to[m  [32m                  promotions.clj:   66[m
+                       [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions[m  [32m                  promotions.clj:   43[m
+                           [33makvo-devops-stats.promotions/[1;33mfetch-promotions[m  [32m                  promotions.clj:   22[m
+                               [33makvo-devops-stats.promotions/[1;33mquery-github[m  [32m                  promotions.clj:   15[m
+                                                                     [37m...[m  [32m                                      [m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1187[m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1191[m
+                                                [33mclj-http.client/[1;33mrequest*[m  [32m                      client.clj: 1173[m
+                                    [33mclj-http.client/wrap-unknown-host/[1;33mfn[m  [32m                      client.clj: 1045[m
+                                            [33mclj-http.links/wrap-links/[1;33mfn[m  [32m                       links.clj:   63[m
+                                        [33mclj-http.cookies/wrap-cookies/[1;33mfn[m  [32m                     cookies.clj:  131[m
+                                          [33mclj-http.client/wrap-method/[1;33mfn[m  [32m                      client.clj:  892[m
+                           [33mclj-http.client/wrap-flatten-nested-params/[1;33mfn[m  [32m                      client.clj: 1016[m
+                                   [33mclj-http.client/wrap-nested-params/[1;33mfn[m  [32m                      client.clj:  992[m
+                                     [33mclj-http.client/wrap-form-params/[1;33mfn[m  [32m                      client.clj:  958[m
+                                    [33mclj-http.client/wrap-content-type/[1;33mfn[m  [32m                      client.clj:  717[m
+                                 [33mclj-http.client/wrap-accept-encoding/[1;33mfn[m  [32m                      client.clj:  756[m
+                                          [33mclj-http.client/wrap-accept/[1;33mfn[m  [32m                      client.clj:  734[m
+                                      [33mclj-http.client/wrap-exceptions/[1;33mfn[m  [32m                      client.clj:  262[m
+                                     [33mclj-http.client/[1;33mexceptions-response[m  [32m                      client.clj:  253[m
+                                           [33mslingshot.support/[1;33mstack-trace[m  [32m                     support.clj:  201[m
+[1;31mclojure.lang.ExceptionInfo[m: [3mclj-http: status 401[m
+                     [1mbody[m: "{\"message\":\"Bad credentials\",\"documentation_url\":\"https://docs.github.com/graphql\"}"
+                   [1mcached[m: nil
+                 [1mchunked?[m: false
+                  [1mheaders[m: {"Access-Control-Expose-Headers"
+                            "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+                            "Referrer-Policy"
+                            "origin-when-cross-origin, strict-origin-when-cross-origin",
+                            "Server" "GitHub.com",
+                            "Content-Type" "application/json; charset=utf-8",
+                            "Access-Control-Allow-Origin" "*",
+                            "X-Content-Type-Options" "nosniff",
+                            "Content-Length" "83",
+                            "X-Frame-Options" "deny",
+                            "Strict-Transport-Security"
+                            "max-age=31536000; includeSubdomains; preload",
+                            "X-RateLimit-Limit" "0",
+                            ...}
+              [1mhttp-client[m: #object[org.apache.http.impl.client.InternalHttpClient 0x5e6d6db5 "org.apache.http.impl.client.InternalHttpClient@5e6d6db5"]
+                   [1mlength[m: 83
+    [1morig-content-encoding[m: nil
+         [1mprotocol-version[m: {:name "HTTP", :major 1, :minor 1}
+            [1mreason-phrase[m: "Unauthorized"
+              [1mrepeatable?[m: false
+             [1mrequest-time[m: 295
+                   [1mstatus[m: 401
+               [1mstreaming?[m: true
+          [1mtrace-redirects[m: []
+                     [1mtype[m: :clj-http.client/unexceptional-status
+
+21-10-31 21:21:58 0dcdcc932ba0 ERROR [akvo-devops-stats.cron-jobs:?] - :duct.logger.timbre/legacy []
+                                                    [37mjava.lang.Thread.run[m  [32m                     Thread.java:  834[m
+                      [37mjava.util.concurrent.ThreadPoolExecutor$Worker.run[m  [32m         ThreadPoolExecutor.java:  628[m
+                       [37mjava.util.concurrent.ThreadPoolExecutor.runWorker[m  [32m         ThreadPoolExecutor.java: 1128[m
+[37mjava.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run[m  [32mScheduledThreadPoolExecutor.java:  305[m
+                             [37mjava.util.concurrent.FutureTask.runAndReset[m  [32m                 FutureTask.java:  305[m
+                     [37mjava.util.concurrent.Executors$RunnableAdapter.call[m  [32m                  Executors.java:  515[m
+                                                                     [37m...[m  [32m                                      [m
+                             [33makvo-devops-stats.cron-jobs/eval19028/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   39[m
+                          [33makvo-devops-stats.cron-jobs/eval19028/fn/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   40[m
+                                [33makvo-devops-stats.cron-jobs/[1;33mcollect-data[m  [32m                   cron_jobs.clj:   27[m
+                 [33makvo-devops-stats.promotions/[1;33mcollect-all-new-promotions[m  [32m                  promotions.clj:   89[m
+                 [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions-up-to[m  [32m                  promotions.clj:   66[m
+                       [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions[m  [32m                  promotions.clj:   43[m
+                           [33makvo-devops-stats.promotions/[1;33mfetch-promotions[m  [32m                  promotions.clj:   22[m
+                               [33makvo-devops-stats.promotions/[1;33mquery-github[m  [32m                  promotions.clj:   15[m
+                                                                     [37m...[m  [32m                                      [m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1187[m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1191[m
+                                                [33mclj-http.client/[1;33mrequest*[m  [32m                      client.clj: 1173[m
+                                    [33mclj-http.client/wrap-unknown-host/[1;33mfn[m  [32m                      client.clj: 1045[m
+                                            [33mclj-http.links/wrap-links/[1;33mfn[m  [32m                       links.clj:   63[m
+                                        [33mclj-http.cookies/wrap-cookies/[1;33mfn[m  [32m                     cookies.clj:  131[m
+                                          [33mclj-http.client/wrap-method/[1;33mfn[m  [32m                      client.clj:  892[m
+                           [33mclj-http.client/wrap-flatten-nested-params/[1;33mfn[m  [32m                      client.clj: 1016[m
+                                   [33mclj-http.client/wrap-nested-params/[1;33mfn[m  [32m                      client.clj:  992[m
+                                     [33mclj-http.client/wrap-form-params/[1;33mfn[m  [32m                      client.clj:  958[m
+                                    [33mclj-http.client/wrap-content-type/[1;33mfn[m  [32m                      client.clj:  717[m
+                                 [33mclj-http.client/wrap-accept-encoding/[1;33mfn[m  [32m                      client.clj:  756[m
+                                          [33mclj-http.client/wrap-accept/[1;33mfn[m  [32m                      client.clj:  734[m
+                                      [33mclj-http.client/wrap-exceptions/[1;33mfn[m  [32m                      client.clj:  262[m
+                                     [33mclj-http.client/[1;33mexceptions-response[m  [32m                      client.clj:  253[m
+                                           [33mslingshot.support/[1;33mstack-trace[m  [32m                     support.clj:  201[m
+[1;31mclojure.lang.ExceptionInfo[m: [3mclj-http: status 401[m
+                     [1mbody[m: "{\"message\":\"Bad credentials\",\"documentation_url\":\"https://docs.github.com/graphql\"}"
+                   [1mcached[m: nil
+                 [1mchunked?[m: false
+                  [1mheaders[m: {"Access-Control-Expose-Headers"
+                            "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+                            "Referrer-Policy"
+                            "origin-when-cross-origin, strict-origin-when-cross-origin",
+                            "Server" "GitHub.com",
+                            "Content-Type" "application/json; charset=utf-8",
+                            "Access-Control-Allow-Origin" "*",
+                            "X-Content-Type-Options" "nosniff",
+                            "Content-Length" "83",
+                            "X-Frame-Options" "deny",
+                            "Strict-Transport-Security"
+                            "max-age=31536000; includeSubdomains; preload",
+                            "X-RateLimit-Limit" "0",
+                            ...}
+              [1mhttp-client[m: #object[org.apache.http.impl.client.InternalHttpClient 0x4d656f02 "org.apache.http.impl.client.InternalHttpClient@4d656f02"]
+                   [1mlength[m: 83
+    [1morig-content-encoding[m: nil
+         [1mprotocol-version[m: {:name "HTTP", :major 1, :minor 1}
+            [1mreason-phrase[m: "Unauthorized"
+              [1mrepeatable?[m: false
+             [1mrequest-time[m: 309
+                   [1mstatus[m: 401
+               [1mstreaming?[m: true
+          [1mtrace-redirects[m: []
+                     [1mtype[m: :clj-http.client/unexceptional-status
+
+21-11-01 21:20:21 0dcdcc932ba0 ERROR [akvo-devops-stats.cron-jobs:?] - :duct.logger.timbre/legacy []
+                                                    [37mjava.lang.Thread.run[m  [32m                     Thread.java:  834[m
+                      [37mjava.util.concurrent.ThreadPoolExecutor$Worker.run[m  [32m         ThreadPoolExecutor.java:  628[m
+                       [37mjava.util.concurrent.ThreadPoolExecutor.runWorker[m  [32m         ThreadPoolExecutor.java: 1128[m
+[37mjava.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run[m  [32mScheduledThreadPoolExecutor.java:  305[m
+                             [37mjava.util.concurrent.FutureTask.runAndReset[m  [32m                 FutureTask.java:  305[m
+                     [37mjava.util.concurrent.Executors$RunnableAdapter.call[m  [32m                  Executors.java:  515[m
+                                                                     [37m...[m  [32m                                      [m
+                             [33makvo-devops-stats.cron-jobs/eval19028/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   39[m
+                          [33makvo-devops-stats.cron-jobs/eval19028/fn/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   40[m
+                                [33makvo-devops-stats.cron-jobs/[1;33mcollect-data[m  [32m                   cron_jobs.clj:   27[m
+                 [33makvo-devops-stats.promotions/[1;33mcollect-all-new-promotions[m  [32m                  promotions.clj:   89[m
+                 [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions-up-to[m  [32m                  promotions.clj:   66[m
+                       [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions[m  [32m                  promotions.clj:   43[m
+                           [33makvo-devops-stats.promotions/[1;33mfetch-promotions[m  [32m                  promotions.clj:   22[m
+                               [33makvo-devops-stats.promotions/[1;33mquery-github[m  [32m                  promotions.clj:   15[m
+                                                                     [37m...[m  [32m                                      [m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1187[m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1191[m
+                                                [33mclj-http.client/[1;33mrequest*[m  [32m                      client.clj: 1173[m
+                                    [33mclj-http.client/wrap-unknown-host/[1;33mfn[m  [32m                      client.clj: 1045[m
+                                            [33mclj-http.links/wrap-links/[1;33mfn[m  [32m                       links.clj:   63[m
+                                        [33mclj-http.cookies/wrap-cookies/[1;33mfn[m  [32m                     cookies.clj:  131[m
+                                          [33mclj-http.client/wrap-method/[1;33mfn[m  [32m                      client.clj:  892[m
+                           [33mclj-http.client/wrap-flatten-nested-params/[1;33mfn[m  [32m                      client.clj: 1016[m
+                                   [33mclj-http.client/wrap-nested-params/[1;33mfn[m  [32m                      client.clj:  992[m
+                                     [33mclj-http.client/wrap-form-params/[1;33mfn[m  [32m                      client.clj:  958[m
+                                    [33mclj-http.client/wrap-content-type/[1;33mfn[m  [32m                      client.clj:  717[m
+                                 [33mclj-http.client/wrap-accept-encoding/[1;33mfn[m  [32m                      client.clj:  756[m
+                                          [33mclj-http.client/wrap-accept/[1;33mfn[m  [32m                      client.clj:  734[m
+                                      [33mclj-http.client/wrap-exceptions/[1;33mfn[m  [32m                      client.clj:  262[m
+                                     [33mclj-http.client/[1;33mexceptions-response[m  [32m                      client.clj:  253[m
+                                           [33mslingshot.support/[1;33mstack-trace[m  [32m                     support.clj:  201[m
+[1;31mclojure.lang.ExceptionInfo[m: [3mclj-http: status 401[m
+                     [1mbody[m: "{\"message\":\"Bad credentials\",\"documentation_url\":\"https://docs.github.com/graphql\"}"
+                   [1mcached[m: nil
+                 [1mchunked?[m: false
+                  [1mheaders[m: {"Access-Control-Expose-Headers"
+                            "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+                            "Referrer-Policy"
+                            "origin-when-cross-origin, strict-origin-when-cross-origin",
+                            "Server" "GitHub.com",
+                            "Content-Type" "application/json; charset=utf-8",
+                            "Access-Control-Allow-Origin" "*",
+                            "X-Content-Type-Options" "nosniff",
+                            "Content-Length" "83",
+                            "X-Frame-Options" "deny",
+                            "Strict-Transport-Security"
+                            "max-age=31536000; includeSubdomains; preload",
+                            "X-RateLimit-Limit" "0",
+                            ...}
+              [1mhttp-client[m: #object[org.apache.http.impl.client.InternalHttpClient 0x73836162 "org.apache.http.impl.client.InternalHttpClient@73836162"]
+                   [1mlength[m: 83
+    [1morig-content-encoding[m: nil
+         [1mprotocol-version[m: {:name "HTTP", :major 1, :minor 1}
+            [1mreason-phrase[m: "Unauthorized"
+              [1mrepeatable?[m: false
+             [1mrequest-time[m: 281
+                   [1mstatus[m: 401
+               [1mstreaming?[m: true
+          [1mtrace-redirects[m: []
+                     [1mtype[m: :clj-http.client/unexceptional-status
+
+21-11-04 21:47:28 0dcdcc932ba0 INFO [akvo-devops-stats.cron-jobs:35] - :duct.logger.timbre/legacy ["Starting cron job to collect stats"]
+21-11-04 21:47:28 0dcdcc932ba0 REPORT [duct.server.http.jetty:13] - :duct.server.http.jetty/starting-server {:port 3000}
+21-11-04 21:47:29 0dcdcc932ba0 ERROR [akvo-devops-stats.cron-jobs:?] - :duct.logger.timbre/legacy []
+                                                    [37mjava.lang.Thread.run[m  [32m                     Thread.java:  834[m
+                      [37mjava.util.concurrent.ThreadPoolExecutor$Worker.run[m  [32m         ThreadPoolExecutor.java:  628[m
+                       [37mjava.util.concurrent.ThreadPoolExecutor.runWorker[m  [32m         ThreadPoolExecutor.java: 1128[m
+[37mjava.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run[m  [32mScheduledThreadPoolExecutor.java:  305[m
+                             [37mjava.util.concurrent.FutureTask.runAndReset[m  [32m                 FutureTask.java:  305[m
+                     [37mjava.util.concurrent.Executors$RunnableAdapter.call[m  [32m                  Executors.java:  515[m
+                                                                     [37m...[m  [32m                                      [m
+                             [33makvo-devops-stats.cron-jobs/eval19028/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   39[m
+                          [33makvo-devops-stats.cron-jobs/eval19028/fn/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   40[m
+                                [33makvo-devops-stats.cron-jobs/[1;33mcollect-data[m  [32m                   cron_jobs.clj:   27[m
+                 [33makvo-devops-stats.promotions/[1;33mcollect-all-new-promotions[m  [32m                  promotions.clj:   89[m
+                 [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions-up-to[m  [32m                  promotions.clj:   66[m
+                       [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions[m  [32m                  promotions.clj:   43[m
+                           [33makvo-devops-stats.promotions/[1;33mfetch-promotions[m  [32m                  promotions.clj:   22[m
+                               [33makvo-devops-stats.promotions/[1;33mquery-github[m  [32m                  promotions.clj:   15[m
+                                                                     [37m...[m  [32m                                      [m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1187[m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1191[m
+                                                [33mclj-http.client/[1;33mrequest*[m  [32m                      client.clj: 1173[m
+                                    [33mclj-http.client/wrap-unknown-host/[1;33mfn[m  [32m                      client.clj: 1045[m
+                                            [33mclj-http.links/wrap-links/[1;33mfn[m  [32m                       links.clj:   63[m
+                                        [33mclj-http.cookies/wrap-cookies/[1;33mfn[m  [32m                     cookies.clj:  131[m
+                                          [33mclj-http.client/wrap-method/[1;33mfn[m  [32m                      client.clj:  892[m
+                           [33mclj-http.client/wrap-flatten-nested-params/[1;33mfn[m  [32m                      client.clj: 1016[m
+                                   [33mclj-http.client/wrap-nested-params/[1;33mfn[m  [32m                      client.clj:  992[m
+                                     [33mclj-http.client/wrap-form-params/[1;33mfn[m  [32m                      client.clj:  958[m
+                                    [33mclj-http.client/wrap-content-type/[1;33mfn[m  [32m                      client.clj:  717[m
+                                 [33mclj-http.client/wrap-accept-encoding/[1;33mfn[m  [32m                      client.clj:  756[m
+                                          [33mclj-http.client/wrap-accept/[1;33mfn[m  [32m                      client.clj:  734[m
+                                      [33mclj-http.client/wrap-exceptions/[1;33mfn[m  [32m                      client.clj:  262[m
+                                     [33mclj-http.client/[1;33mexceptions-response[m  [32m                      client.clj:  253[m
+                                           [33mslingshot.support/[1;33mstack-trace[m  [32m                     support.clj:  201[m
+[1;31mclojure.lang.ExceptionInfo[m: [3mclj-http: status 401[m
+                     [1mbody[m: "{\"message\":\"Bad credentials\",\"documentation_url\":\"https://docs.github.com/graphql\"}"
+                   [1mcached[m: nil
+                 [1mchunked?[m: false
+                  [1mheaders[m: {"Access-Control-Expose-Headers"
+                            "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+                            "Referrer-Policy"
+                            "origin-when-cross-origin, strict-origin-when-cross-origin",
+                            "Server" "GitHub.com",
+                            "Content-Type" "application/json; charset=utf-8",
+                            "Access-Control-Allow-Origin" "*",
+                            "X-Content-Type-Options" "nosniff",
+                            "Content-Length" "83",
+                            "X-Frame-Options" "deny",
+                            "Strict-Transport-Security"
+                            "max-age=31536000; includeSubdomains; preload",
+                            "X-RateLimit-Limit" "0",
+                            ...}
+              [1mhttp-client[m: #object[org.apache.http.impl.client.InternalHttpClient 0x8d9c10b "org.apache.http.impl.client.InternalHttpClient@8d9c10b"]
+                   [1mlength[m: 83
+    [1morig-content-encoding[m: nil
+         [1mprotocol-version[m: {:name "HTTP", :major 1, :minor 1}
+            [1mreason-phrase[m: "Unauthorized"
+              [1mrepeatable?[m: false
+             [1mrequest-time[m: 1552
+                   [1mstatus[m: 401
+               [1mstreaming?[m: true
+          [1mtrace-redirects[m: []
+                     [1mtype[m: :clj-http.client/unexceptional-status
+
+21-11-04 21:52:29 475c94a8e535 REPORT [duct.migrator.ragtime:14] - :duct.migrator.ragtime/applying 00001-commits
+21-11-04 21:52:29 475c94a8e535 REPORT [duct.migrator.ragtime:14] - :duct.migrator.ragtime/applying 00002-promotions
+21-11-04 21:52:29 475c94a8e535 REPORT [duct.migrator.ragtime:14] - :duct.migrator.ragtime/applying 00003-flips
+21-11-04 21:52:29 475c94a8e535 REPORT [duct.migrator.ragtime:14] - :duct.migrator.ragtime/applying 00004-http-codes
+21-11-04 21:52:29 475c94a8e535 INFO [akvo-devops-stats.cron-jobs:35] - :duct.logger.timbre/legacy ["Starting cron job to collect stats"]
+21-11-04 21:52:29 475c94a8e535 REPORT [duct.server.http.jetty:13] - :duct.server.http.jetty/starting-server {:port 3000}
+21-11-04 21:52:30 475c94a8e535 ERROR [akvo-devops-stats.cron-jobs:?] - :duct.logger.timbre/legacy []
+                                                    [37mjava.lang.Thread.run[m  [32m                     Thread.java:  834[m
+                      [37mjava.util.concurrent.ThreadPoolExecutor$Worker.run[m  [32m         ThreadPoolExecutor.java:  628[m
+                       [37mjava.util.concurrent.ThreadPoolExecutor.runWorker[m  [32m         ThreadPoolExecutor.java: 1128[m
+[37mjava.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run[m  [32mScheduledThreadPoolExecutor.java:  305[m
+                             [37mjava.util.concurrent.FutureTask.runAndReset[m  [32m                 FutureTask.java:  305[m
+                     [37mjava.util.concurrent.Executors$RunnableAdapter.call[m  [32m                  Executors.java:  515[m
+                                                                     [37m...[m  [32m                                      [m
+                             [33makvo-devops-stats.cron-jobs/eval19028/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   39[m
+                          [33makvo-devops-stats.cron-jobs/eval19028/fn/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   40[m
+                                [33makvo-devops-stats.cron-jobs/[1;33mcollect-data[m  [32m                   cron_jobs.clj:   27[m
+                 [33makvo-devops-stats.promotions/[1;33mcollect-all-new-promotions[m  [32m                  promotions.clj:   89[m
+                 [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions-up-to[m  [32m                  promotions.clj:   66[m
+                       [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions[m  [32m                  promotions.clj:   43[m
+                           [33makvo-devops-stats.promotions/[1;33mfetch-promotions[m  [32m                  promotions.clj:   22[m
+                               [33makvo-devops-stats.promotions/[1;33mquery-github[m  [32m                  promotions.clj:   15[m
+                                                                     [37m...[m  [32m                                      [m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1187[m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1191[m
+                                                [33mclj-http.client/[1;33mrequest*[m  [32m                      client.clj: 1173[m
+                                    [33mclj-http.client/wrap-unknown-host/[1;33mfn[m  [32m                      client.clj: 1045[m
+                                            [33mclj-http.links/wrap-links/[1;33mfn[m  [32m                       links.clj:   63[m
+                                        [33mclj-http.cookies/wrap-cookies/[1;33mfn[m  [32m                     cookies.clj:  131[m
+                                          [33mclj-http.client/wrap-method/[1;33mfn[m  [32m                      client.clj:  892[m
+                           [33mclj-http.client/wrap-flatten-nested-params/[1;33mfn[m  [32m                      client.clj: 1016[m
+                                   [33mclj-http.client/wrap-nested-params/[1;33mfn[m  [32m                      client.clj:  992[m
+                                     [33mclj-http.client/wrap-form-params/[1;33mfn[m  [32m                      client.clj:  958[m
+                                    [33mclj-http.client/wrap-content-type/[1;33mfn[m  [32m                      client.clj:  717[m
+                                 [33mclj-http.client/wrap-accept-encoding/[1;33mfn[m  [32m                      client.clj:  756[m
+                                          [33mclj-http.client/wrap-accept/[1;33mfn[m  [32m                      client.clj:  734[m
+                                      [33mclj-http.client/wrap-exceptions/[1;33mfn[m  [32m                      client.clj:  262[m
+                                     [33mclj-http.client/[1;33mexceptions-response[m  [32m                      client.clj:  253[m
+                                           [33mslingshot.support/[1;33mstack-trace[m  [32m                     support.clj:  201[m
+[1;31mclojure.lang.ExceptionInfo[m: [3mclj-http: status 401[m
+                     [1mbody[m: "{\"message\":\"Bad credentials\",\"documentation_url\":\"https://docs.github.com/graphql\"}"
+                   [1mcached[m: nil
+                 [1mchunked?[m: false
+                  [1mheaders[m: {"Access-Control-Expose-Headers"
+                            "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+                            "Referrer-Policy"
+                            "origin-when-cross-origin, strict-origin-when-cross-origin",
+                            "Server" "GitHub.com",
+                            "Content-Type" "application/json; charset=utf-8",
+                            "Access-Control-Allow-Origin" "*",
+                            "X-Content-Type-Options" "nosniff",
+                            "Content-Length" "83",
+                            "X-Frame-Options" "deny",
+                            "Strict-Transport-Security"
+                            "max-age=31536000; includeSubdomains; preload",
+                            "X-RateLimit-Limit" "0",
+                            ...}
+              [1mhttp-client[m: #object[org.apache.http.impl.client.InternalHttpClient 0x599e6af5 "org.apache.http.impl.client.InternalHttpClient@599e6af5"]
+                   [1mlength[m: 83
+    [1morig-content-encoding[m: nil
+         [1mprotocol-version[m: {:name "HTTP", :major 1, :minor 1}
+            [1mreason-phrase[m: "Unauthorized"
+              [1mrepeatable?[m: false
+             [1mrequest-time[m: 1232
+                   [1mstatus[m: 401
+               [1mstreaming?[m: true
+          [1mtrace-redirects[m: []
+                     [1mtype[m: :clj-http.client/unexceptional-status
+
+21-11-04 21:54:01 475c94a8e535 INFO [akvo-devops-stats.cron-jobs:35] - :duct.logger.timbre/legacy ["Starting cron job to collect stats"]
+21-11-04 21:54:01 475c94a8e535 ERROR [akvo-devops-stats.cron-jobs:?] - :duct.logger.timbre/legacy []
+                                                    [37mjava.lang.Thread.run[m  [32m                     Thread.java:  834[m
+                      [37mjava.util.concurrent.ThreadPoolExecutor$Worker.run[m  [32m         ThreadPoolExecutor.java:  628[m
+                       [37mjava.util.concurrent.ThreadPoolExecutor.runWorker[m  [32m         ThreadPoolExecutor.java: 1128[m
+[37mjava.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run[m  [32mScheduledThreadPoolExecutor.java:  305[m
+                             [37mjava.util.concurrent.FutureTask.runAndReset[m  [32m                 FutureTask.java:  305[m
+                     [37mjava.util.concurrent.Executors$RunnableAdapter.call[m  [32m                  Executors.java:  515[m
+                                                                     [37m...[m  [32m                                      [m
+                             [33makvo-devops-stats.cron-jobs/eval25181/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   39[m
+                          [33makvo-devops-stats.cron-jobs/eval25181/fn/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   40[m
+                                [33makvo-devops-stats.cron-jobs/[1;33mcollect-data[m  [32m                   cron_jobs.clj:   27[m
+                 [33makvo-devops-stats.promotions/[1;33mcollect-all-new-promotions[m  [32m                  promotions.clj:   89[m
+                 [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions-up-to[m  [32m                  promotions.clj:   66[m
+                       [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions[m  [32m                  promotions.clj:   43[m
+                           [33makvo-devops-stats.promotions/[1;33mfetch-promotions[m  [32m                  promotions.clj:   22[m
+                               [33makvo-devops-stats.promotions/[1;33mquery-github[m  [32m                  promotions.clj:   15[m
+                                                                     [37m...[m  [32m                                      [m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1187[m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1191[m
+                                                [33mclj-http.client/[1;33mrequest*[m  [32m                      client.clj: 1173[m
+                                    [33mclj-http.client/wrap-unknown-host/[1;33mfn[m  [32m                      client.clj: 1045[m
+                                            [33mclj-http.links/wrap-links/[1;33mfn[m  [32m                       links.clj:   63[m
+                                        [33mclj-http.cookies/wrap-cookies/[1;33mfn[m  [32m                     cookies.clj:  131[m
+                                          [33mclj-http.client/wrap-method/[1;33mfn[m  [32m                      client.clj:  892[m
+                           [33mclj-http.client/wrap-flatten-nested-params/[1;33mfn[m  [32m                      client.clj: 1016[m
+                                   [33mclj-http.client/wrap-nested-params/[1;33mfn[m  [32m                      client.clj:  992[m
+                                     [33mclj-http.client/wrap-form-params/[1;33mfn[m  [32m                      client.clj:  958[m
+                                    [33mclj-http.client/wrap-content-type/[1;33mfn[m  [32m                      client.clj:  717[m
+                                 [33mclj-http.client/wrap-accept-encoding/[1;33mfn[m  [32m                      client.clj:  756[m
+                                          [33mclj-http.client/wrap-accept/[1;33mfn[m  [32m                      client.clj:  734[m
+                                      [33mclj-http.client/wrap-exceptions/[1;33mfn[m  [32m                      client.clj:  262[m
+                                     [33mclj-http.client/[1;33mexceptions-response[m  [32m                      client.clj:  253[m
+                                           [33mslingshot.support/[1;33mstack-trace[m  [32m                     support.clj:  201[m
+[1;31mclojure.lang.ExceptionInfo[m: [3mclj-http: status 401[m
+                     [1mbody[m: "{\"message\":\"Bad credentials\",\"documentation_url\":\"https://docs.github.com/graphql\"}"
+                   [1mcached[m: nil
+                 [1mchunked?[m: false
+                  [1mheaders[m: {"Access-Control-Expose-Headers"
+                            "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+                            "Referrer-Policy"
+                            "origin-when-cross-origin, strict-origin-when-cross-origin",
+                            "Server" "GitHub.com",
+                            "Content-Type" "application/json; charset=utf-8",
+                            "Access-Control-Allow-Origin" "*",
+                            "X-Content-Type-Options" "nosniff",
+                            "Content-Length" "83",
+                            "X-Frame-Options" "deny",
+                            "Strict-Transport-Security"
+                            "max-age=31536000; includeSubdomains; preload",
+                            "X-RateLimit-Limit" "0",
+                            ...}
+              [1mhttp-client[m: #object[org.apache.http.impl.client.InternalHttpClient 0x5996fa95 "org.apache.http.impl.client.InternalHttpClient@5996fa95"]
+                   [1mlength[m: 83
+    [1morig-content-encoding[m: nil
+         [1mprotocol-version[m: {:name "HTTP", :major 1, :minor 1}
+            [1mreason-phrase[m: "Unauthorized"
+              [1mrepeatable?[m: false
+             [1mrequest-time[m: 370
+                   [1mstatus[m: 401
+               [1mstreaming?[m: true
+          [1mtrace-redirects[m: []
+                     [1mtype[m: :clj-http.client/unexceptional-status
+
+21-11-04 21:55:18 475c94a8e535 INFO [akvo-devops-stats.cron-jobs:35] - :duct.logger.timbre/legacy ["Starting cron job to collect stats"]
+21-11-04 21:55:18 475c94a8e535 REPORT [duct.server.http.jetty:13] - :duct.server.http.jetty/starting-server {:port 3000}
+21-11-04 21:55:20 475c94a8e535 ERROR [akvo-devops-stats.cron-jobs:?] - :duct.logger.timbre/legacy []
+                                                    [37mjava.lang.Thread.run[m  [32m                     Thread.java:  834[m
+                      [37mjava.util.concurrent.ThreadPoolExecutor$Worker.run[m  [32m         ThreadPoolExecutor.java:  628[m
+                       [37mjava.util.concurrent.ThreadPoolExecutor.runWorker[m  [32m         ThreadPoolExecutor.java: 1128[m
+[37mjava.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run[m  [32mScheduledThreadPoolExecutor.java:  305[m
+                             [37mjava.util.concurrent.FutureTask.runAndReset[m  [32m                 FutureTask.java:  305[m
+                     [37mjava.util.concurrent.Executors$RunnableAdapter.call[m  [32m                  Executors.java:  515[m
+                                                                     [37m...[m  [32m                                      [m
+                             [33makvo-devops-stats.cron-jobs/eval19028/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   39[m
+                          [33makvo-devops-stats.cron-jobs/eval19028/fn/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   40[m
+                                [33makvo-devops-stats.cron-jobs/[1;33mcollect-data[m  [32m                   cron_jobs.clj:   27[m
+                 [33makvo-devops-stats.promotions/[1;33mcollect-all-new-promotions[m  [32m                  promotions.clj:   89[m
+                 [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions-up-to[m  [32m                  promotions.clj:   66[m
+                       [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions[m  [32m                  promotions.clj:   43[m
+                           [33makvo-devops-stats.promotions/[1;33mfetch-promotions[m  [32m                  promotions.clj:   22[m
+                               [33makvo-devops-stats.promotions/[1;33mquery-github[m  [32m                  promotions.clj:   15[m
+                                                                     [37m...[m  [32m                                      [m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1187[m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1191[m
+                                                [33mclj-http.client/[1;33mrequest*[m  [32m                      client.clj: 1173[m
+                                    [33mclj-http.client/wrap-unknown-host/[1;33mfn[m  [32m                      client.clj: 1045[m
+                                            [33mclj-http.links/wrap-links/[1;33mfn[m  [32m                       links.clj:   63[m
+                                        [33mclj-http.cookies/wrap-cookies/[1;33mfn[m  [32m                     cookies.clj:  131[m
+                                          [33mclj-http.client/wrap-method/[1;33mfn[m  [32m                      client.clj:  892[m
+                           [33mclj-http.client/wrap-flatten-nested-params/[1;33mfn[m  [32m                      client.clj: 1016[m
+                                   [33mclj-http.client/wrap-nested-params/[1;33mfn[m  [32m                      client.clj:  992[m
+                                     [33mclj-http.client/wrap-form-params/[1;33mfn[m  [32m                      client.clj:  958[m
+                                    [33mclj-http.client/wrap-content-type/[1;33mfn[m  [32m                      client.clj:  717[m
+                                 [33mclj-http.client/wrap-accept-encoding/[1;33mfn[m  [32m                      client.clj:  756[m
+                                          [33mclj-http.client/wrap-accept/[1;33mfn[m  [32m                      client.clj:  734[m
+                                      [33mclj-http.client/wrap-exceptions/[1;33mfn[m  [32m                      client.clj:  262[m
+                                     [33mclj-http.client/[1;33mexceptions-response[m  [32m                      client.clj:  253[m
+                                           [33mslingshot.support/[1;33mstack-trace[m  [32m                     support.clj:  201[m
+[1;31mclojure.lang.ExceptionInfo[m: [3mclj-http: status 401[m
+                     [1mbody[m: "{\"message\":\"Bad credentials\",\"documentation_url\":\"https://docs.github.com/graphql\"}"
+                   [1mcached[m: nil
+                 [1mchunked?[m: false
+                  [1mheaders[m: {"Access-Control-Expose-Headers"
+                            "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+                            "Referrer-Policy"
+                            "origin-when-cross-origin, strict-origin-when-cross-origin",
+                            "Server" "GitHub.com",
+                            "Content-Type" "application/json; charset=utf-8",
+                            "Access-Control-Allow-Origin" "*",
+                            "X-Content-Type-Options" "nosniff",
+                            "Content-Length" "83",
+                            "X-Frame-Options" "deny",
+                            "Strict-Transport-Security"
+                            "max-age=31536000; includeSubdomains; preload",
+                            "X-RateLimit-Limit" "0",
+                            ...}
+              [1mhttp-client[m: #object[org.apache.http.impl.client.InternalHttpClient 0x60025051 "org.apache.http.impl.client.InternalHttpClient@60025051"]
+                   [1mlength[m: 83
+    [1morig-content-encoding[m: nil
+         [1mprotocol-version[m: {:name "HTTP", :major 1, :minor 1}
+            [1mreason-phrase[m: "Unauthorized"
+              [1mrepeatable?[m: false
+             [1mrequest-time[m: 1792
+                   [1mstatus[m: 401
+               [1mstreaming?[m: true
+          [1mtrace-redirects[m: []
+                     [1mtype[m: :clj-http.client/unexceptional-status
+
+21-11-04 22:10:05 475c94a8e535 INFO [akvo-devops-stats.cron-jobs:35] - :duct.logger.timbre/legacy ["Starting cron job to collect stats"]
+21-11-04 22:10:05 475c94a8e535 ERROR [akvo-devops-stats.cron-jobs:?] - :duct.logger.timbre/legacy []
+                                                    [37mjava.lang.Thread.run[m  [32m                     Thread.java:  834[m
+                      [37mjava.util.concurrent.ThreadPoolExecutor$Worker.run[m  [32m         ThreadPoolExecutor.java:  628[m
+                       [37mjava.util.concurrent.ThreadPoolExecutor.runWorker[m  [32m         ThreadPoolExecutor.java: 1128[m
+[37mjava.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run[m  [32mScheduledThreadPoolExecutor.java:  305[m
+                             [37mjava.util.concurrent.FutureTask.runAndReset[m  [32m                 FutureTask.java:  305[m
+                     [37mjava.util.concurrent.Executors$RunnableAdapter.call[m  [32m                  Executors.java:  515[m
+                                                                     [37m...[m  [32m                                      [m
+                             [33makvo-devops-stats.cron-jobs/eval25226/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   39[m
+                          [33makvo-devops-stats.cron-jobs/eval25226/fn/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   40[m
+                                [33makvo-devops-stats.cron-jobs/[1;33mcollect-data[m  [32m                   cron_jobs.clj:   27[m
+                 [33makvo-devops-stats.promotions/[1;33mcollect-all-new-promotions[m  [32m                  promotions.clj:   89[m
+                 [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions-up-to[m  [32m                  promotions.clj:   66[m
+                       [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions[m  [32m                  promotions.clj:   43[m
+                           [33makvo-devops-stats.promotions/[1;33mfetch-promotions[m  [32m                  promotions.clj:   22[m
+                               [33makvo-devops-stats.promotions/[1;33mquery-github[m  [32m                  promotions.clj:   15[m
+                                                                     [37m...[m  [32m                                      [m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1187[m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1191[m
+                                                [33mclj-http.client/[1;33mrequest*[m  [32m                      client.clj: 1173[m
+                                    [33mclj-http.client/wrap-unknown-host/[1;33mfn[m  [32m                      client.clj: 1045[m
+                                            [33mclj-http.links/wrap-links/[1;33mfn[m  [32m                       links.clj:   63[m
+                                        [33mclj-http.cookies/wrap-cookies/[1;33mfn[m  [32m                     cookies.clj:  131[m
+                                          [33mclj-http.client/wrap-method/[1;33mfn[m  [32m                      client.clj:  892[m
+                           [33mclj-http.client/wrap-flatten-nested-params/[1;33mfn[m  [32m                      client.clj: 1016[m
+                                   [33mclj-http.client/wrap-nested-params/[1;33mfn[m  [32m                      client.clj:  992[m
+                                     [33mclj-http.client/wrap-form-params/[1;33mfn[m  [32m                      client.clj:  958[m
+                                    [33mclj-http.client/wrap-content-type/[1;33mfn[m  [32m                      client.clj:  717[m
+                                 [33mclj-http.client/wrap-accept-encoding/[1;33mfn[m  [32m                      client.clj:  756[m
+                                          [33mclj-http.client/wrap-accept/[1;33mfn[m  [32m                      client.clj:  734[m
+                                      [33mclj-http.client/wrap-exceptions/[1;33mfn[m  [32m                      client.clj:  262[m
+                                     [33mclj-http.client/[1;33mexceptions-response[m  [32m                      client.clj:  253[m
+                                           [33mslingshot.support/[1;33mstack-trace[m  [32m                     support.clj:  201[m
+[1;31mclojure.lang.ExceptionInfo[m: [3mclj-http: status 401[m
+                     [1mbody[m: "{\"message\":\"Bad credentials\",\"documentation_url\":\"https://docs.github.com/graphql\"}"
+                   [1mcached[m: nil
+                 [1mchunked?[m: false
+                  [1mheaders[m: {"Access-Control-Expose-Headers"
+                            "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+                            "Referrer-Policy"
+                            "origin-when-cross-origin, strict-origin-when-cross-origin",
+                            "Server" "GitHub.com",
+                            "Content-Type" "application/json; charset=utf-8",
+                            "Access-Control-Allow-Origin" "*",
+                            "X-Content-Type-Options" "nosniff",
+                            "Content-Length" "83",
+                            "X-Frame-Options" "deny",
+                            "Strict-Transport-Security"
+                            "max-age=31536000; includeSubdomains; preload",
+                            "X-RateLimit-Limit" "0",
+                            ...}
+              [1mhttp-client[m: #object[org.apache.http.impl.client.InternalHttpClient 0x14bb49b0 "org.apache.http.impl.client.InternalHttpClient@14bb49b0"]
+                   [1mlength[m: 83
+    [1morig-content-encoding[m: nil
+         [1mprotocol-version[m: {:name "HTTP", :major 1, :minor 1}
+            [1mreason-phrase[m: "Unauthorized"
+              [1mrepeatable?[m: false
+             [1mrequest-time[m: 293
+                   [1mstatus[m: 401
+               [1mstreaming?[m: true
+          [1mtrace-redirects[m: []
+                     [1mtype[m: :clj-http.client/unexceptional-status
+
+21-11-04 22:13:48 475c94a8e535 INFO [akvo-devops-stats.cron-jobs:35] - :duct.logger.timbre/legacy ["Starting cron job to collect stats"]
+21-11-04 22:13:50 475c94a8e535 INFO [akvo-devops-stats.cron-jobs:35] - :duct.logger.timbre/legacy ["Starting cron job to collect stats"]
+21-11-04 22:13:50 475c94a8e535 ERROR [akvo-devops-stats.cron-jobs:?] - :duct.logger.timbre/legacy []
+                                                    [37mjava.lang.Thread.run[m  [32m                     Thread.java:  834[m
+                      [37mjava.util.concurrent.ThreadPoolExecutor$Worker.run[m  [32m         ThreadPoolExecutor.java:  628[m
+                       [37mjava.util.concurrent.ThreadPoolExecutor.runWorker[m  [32m         ThreadPoolExecutor.java: 1128[m
+[37mjava.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run[m  [32mScheduledThreadPoolExecutor.java:  305[m
+                             [37mjava.util.concurrent.FutureTask.runAndReset[m  [32m                 FutureTask.java:  305[m
+                     [37mjava.util.concurrent.Executors$RunnableAdapter.call[m  [32m                  Executors.java:  515[m
+                                                                     [37m...[m  [32m                                      [m
+                             [33makvo-devops-stats.cron-jobs/eval25562/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   39[m
+                          [33makvo-devops-stats.cron-jobs/eval25562/fn/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   40[m
+                                [33makvo-devops-stats.cron-jobs/[1;33mcollect-data[m  [32m                   cron_jobs.clj:   27[m
+                 [33makvo-devops-stats.promotions/[1;33mcollect-all-new-promotions[m  [32m                  promotions.clj:   89[m
+                 [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions-up-to[m  [32m                  promotions.clj:   66[m
+                       [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions[m  [32m                  promotions.clj:   43[m
+                           [33makvo-devops-stats.promotions/[1;33mfetch-promotions[m  [32m                  promotions.clj:   22[m
+                               [33makvo-devops-stats.promotions/[1;33mquery-github[m  [32m                  promotions.clj:   15[m
+                                                                     [37m...[m  [32m                                      [m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1187[m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1191[m
+                                                [33mclj-http.client/[1;33mrequest*[m  [32m                      client.clj: 1173[m
+                                    [33mclj-http.client/wrap-unknown-host/[1;33mfn[m  [32m                      client.clj: 1045[m
+                                            [33mclj-http.links/wrap-links/[1;33mfn[m  [32m                       links.clj:   63[m
+                                        [33mclj-http.cookies/wrap-cookies/[1;33mfn[m  [32m                     cookies.clj:  131[m
+                                          [33mclj-http.client/wrap-method/[1;33mfn[m  [32m                      client.clj:  892[m
+                           [33mclj-http.client/wrap-flatten-nested-params/[1;33mfn[m  [32m                      client.clj: 1016[m
+                                   [33mclj-http.client/wrap-nested-params/[1;33mfn[m  [32m                      client.clj:  992[m
+                                     [33mclj-http.client/wrap-form-params/[1;33mfn[m  [32m                      client.clj:  958[m
+                                    [33mclj-http.client/wrap-content-type/[1;33mfn[m  [32m                      client.clj:  717[m
+                                 [33mclj-http.client/wrap-accept-encoding/[1;33mfn[m  [32m                      client.clj:  756[m
+                                          [33mclj-http.client/wrap-accept/[1;33mfn[m  [32m                      client.clj:  734[m
+                                      [33mclj-http.client/wrap-exceptions/[1;33mfn[m  [32m                      client.clj:  262[m
+                                     [33mclj-http.client/[1;33mexceptions-response[m  [32m                      client.clj:  253[m
+                                           [33mslingshot.support/[1;33mstack-trace[m  [32m                     support.clj:  201[m
+[1;31mclojure.lang.ExceptionInfo[m: [3mclj-http: status 401[m
+                     [1mbody[m: "{\"message\":\"Bad credentials\",\"documentation_url\":\"https://docs.github.com/graphql\"}"
+                   [1mcached[m: nil
+                 [1mchunked?[m: false
+                  [1mheaders[m: {"Access-Control-Expose-Headers"
+                            "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+                            "Referrer-Policy"
+                            "origin-when-cross-origin, strict-origin-when-cross-origin",
+                            "Server" "GitHub.com",
+                            "Content-Type" "application/json; charset=utf-8",
+                            "Access-Control-Allow-Origin" "*",
+                            "X-Content-Type-Options" "nosniff",
+                            "Content-Length" "83",
+                            "X-Frame-Options" "deny",
+                            "Strict-Transport-Security"
+                            "max-age=31536000; includeSubdomains; preload",
+                            "X-RateLimit-Limit" "0",
+                            ...}
+              [1mhttp-client[m: #object[org.apache.http.impl.client.InternalHttpClient 0x6070f846 "org.apache.http.impl.client.InternalHttpClient@6070f846"]
+                   [1mlength[m: 83
+    [1morig-content-encoding[m: nil
+         [1mprotocol-version[m: {:name "HTTP", :major 1, :minor 1}
+            [1mreason-phrase[m: "Unauthorized"
+              [1mrepeatable?[m: false
+             [1mrequest-time[m: 275
+                   [1mstatus[m: 401
+               [1mstreaming?[m: true
+          [1mtrace-redirects[m: []
+                     [1mtype[m: :clj-http.client/unexceptional-status
+
+21-11-04 22:31:53 98fac023be27 REPORT [duct.migrator.ragtime:15] - :duct.migrator.ragtime/rolling-back 00004-http-codes
+21-11-04 22:33:38 6e0d08c71689 REPORT [duct.migrator.ragtime:14] - :duct.migrator.ragtime/applying 00001-commits
+21-11-04 22:33:39 6e0d08c71689 REPORT [duct.migrator.ragtime:14] - :duct.migrator.ragtime/applying 00002-promotions
+21-11-04 22:33:39 6e0d08c71689 REPORT [duct.migrator.ragtime:14] - :duct.migrator.ragtime/applying 00003-flips
+21-11-04 22:33:39 6e0d08c71689 INFO [akvo-devops-stats.cron-jobs:33] - :duct.logger.timbre/legacy ["Starting cron job to collect stats"]
+21-11-04 22:33:39 6e0d08c71689 REPORT [duct.server.http.jetty:13] - :duct.server.http.jetty/starting-server {:port 3000}
+21-11-04 22:33:40 6e0d08c71689 ERROR [akvo-devops-stats.cron-jobs:?] - :duct.logger.timbre/legacy []
+                                                    [37mjava.lang.Thread.run[m  [32m                     Thread.java:  834[m
+                      [37mjava.util.concurrent.ThreadPoolExecutor$Worker.run[m  [32m         ThreadPoolExecutor.java:  628[m
+                       [37mjava.util.concurrent.ThreadPoolExecutor.runWorker[m  [32m         ThreadPoolExecutor.java: 1128[m
+[37mjava.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run[m  [32mScheduledThreadPoolExecutor.java:  305[m
+                             [37mjava.util.concurrent.FutureTask.runAndReset[m  [32m                 FutureTask.java:  305[m
+                     [37mjava.util.concurrent.Executors$RunnableAdapter.call[m  [32m                  Executors.java:  515[m
+                                                                     [37m...[m  [32m                                      [m
+                             [33makvo-devops-stats.cron-jobs/eval18015/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   37[m
+                          [33makvo-devops-stats.cron-jobs/eval18015/fn/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   38[m
+                                [33makvo-devops-stats.cron-jobs/[1;33mcollect-data[m  [32m                   cron_jobs.clj:   26[m
+                 [33makvo-devops-stats.promotions/[1;33mcollect-all-new-promotions[m  [32m                  promotions.clj:   89[m
+                 [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions-up-to[m  [32m                  promotions.clj:   66[m
+                       [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions[m  [32m                  promotions.clj:   43[m
+                           [33makvo-devops-stats.promotions/[1;33mfetch-promotions[m  [32m                  promotions.clj:   22[m
+                               [33makvo-devops-stats.promotions/[1;33mquery-github[m  [32m                  promotions.clj:   15[m
+                                                                     [37m...[m  [32m                                      [m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1187[m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1191[m
+                                                [33mclj-http.client/[1;33mrequest*[m  [32m                      client.clj: 1173[m
+                                    [33mclj-http.client/wrap-unknown-host/[1;33mfn[m  [32m                      client.clj: 1045[m
+                                            [33mclj-http.links/wrap-links/[1;33mfn[m  [32m                       links.clj:   63[m
+                                        [33mclj-http.cookies/wrap-cookies/[1;33mfn[m  [32m                     cookies.clj:  131[m
+                                          [33mclj-http.client/wrap-method/[1;33mfn[m  [32m                      client.clj:  892[m
+                           [33mclj-http.client/wrap-flatten-nested-params/[1;33mfn[m  [32m                      client.clj: 1016[m
+                                   [33mclj-http.client/wrap-nested-params/[1;33mfn[m  [32m                      client.clj:  992[m
+                                     [33mclj-http.client/wrap-form-params/[1;33mfn[m  [32m                      client.clj:  958[m
+                                    [33mclj-http.client/wrap-content-type/[1;33mfn[m  [32m                      client.clj:  717[m
+                                 [33mclj-http.client/wrap-accept-encoding/[1;33mfn[m  [32m                      client.clj:  756[m
+                                          [33mclj-http.client/wrap-accept/[1;33mfn[m  [32m                      client.clj:  734[m
+                                      [33mclj-http.client/wrap-exceptions/[1;33mfn[m  [32m                      client.clj:  262[m
+                                     [33mclj-http.client/[1;33mexceptions-response[m  [32m                      client.clj:  253[m
+                                           [33mslingshot.support/[1;33mstack-trace[m  [32m                     support.clj:  201[m
+[1;31mclojure.lang.ExceptionInfo[m: [3mclj-http: status 401[m
+                     [1mbody[m: "{\"message\":\"Bad credentials\",\"documentation_url\":\"https://docs.github.com/graphql\"}"
+                   [1mcached[m: nil
+                 [1mchunked?[m: false
+                  [1mheaders[m: {"Access-Control-Expose-Headers"
+                            "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+                            "Referrer-Policy"
+                            "origin-when-cross-origin, strict-origin-when-cross-origin",
+                            "Server" "GitHub.com",
+                            "Content-Type" "application/json; charset=utf-8",
+                            "Access-Control-Allow-Origin" "*",
+                            "X-Content-Type-Options" "nosniff",
+                            "Content-Length" "83",
+                            "X-Frame-Options" "deny",
+                            "Strict-Transport-Security"
+                            "max-age=31536000; includeSubdomains; preload",
+                            "X-RateLimit-Limit" "0",
+                            ...}
+              [1mhttp-client[m: #object[org.apache.http.impl.client.InternalHttpClient 0x7acba4a8 "org.apache.http.impl.client.InternalHttpClient@7acba4a8"]
+                   [1mlength[m: 83
+    [1morig-content-encoding[m: nil
+         [1mprotocol-version[m: {:name "HTTP", :major 1, :minor 1}
+            [1mreason-phrase[m: "Unauthorized"
+              [1mrepeatable?[m: false
+             [1mrequest-time[m: 1251
+                   [1mstatus[m: 401
+               [1mstreaming?[m: true
+          [1mtrace-redirects[m: []
+                     [1mtype[m: :clj-http.client/unexceptional-status
+
+21-11-04 22:34:22 6e0d08c71689 INFO [akvo-devops-stats.cron-jobs:33] - :duct.logger.timbre/legacy ["Starting cron job to collect stats"]
+21-11-04 22:34:24 6e0d08c71689 ERROR [akvo-devops-stats.cron-jobs:?] - :duct.logger.timbre/legacy []
+                                                    [37mjava.lang.Thread.run[m  [32m                     Thread.java:  834[m
+                      [37mjava.util.concurrent.ThreadPoolExecutor$Worker.run[m  [32m         ThreadPoolExecutor.java:  628[m
+                       [37mjava.util.concurrent.ThreadPoolExecutor.runWorker[m  [32m         ThreadPoolExecutor.java: 1128[m
+[37mjava.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run[m  [32mScheduledThreadPoolExecutor.java:  305[m
+                             [37mjava.util.concurrent.FutureTask.runAndReset[m  [32m                 FutureTask.java:  305[m
+                     [37mjava.util.concurrent.Executors$RunnableAdapter.call[m  [32m                  Executors.java:  515[m
+                                                                     [37m...[m  [32m                                      [m
+                             [33makvo-devops-stats.cron-jobs/eval24809/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   37[m
+                          [33makvo-devops-stats.cron-jobs/eval24809/fn/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   38[m
+                                [33makvo-devops-stats.cron-jobs/[1;33mcollect-data[m  [32m                   cron_jobs.clj:   26[m
+                 [33makvo-devops-stats.promotions/[1;33mcollect-all-new-promotions[m  [32m                  promotions.clj:   89[m
+                 [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions-up-to[m  [32m                  promotions.clj:   66[m
+                       [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions[m  [32m                  promotions.clj:   43[m
+                           [33makvo-devops-stats.promotions/[1;33mfetch-promotions[m  [32m                  promotions.clj:   22[m
+                               [33makvo-devops-stats.promotions/[1;33mquery-github[m  [32m                  promotions.clj:   15[m
+                                                                     [37m...[m  [32m                                      [m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1187[m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1191[m
+                                                [33mclj-http.client/[1;33mrequest*[m  [32m                      client.clj: 1173[m
+                                    [33mclj-http.client/wrap-unknown-host/[1;33mfn[m  [32m                      client.clj: 1045[m
+                                            [33mclj-http.links/wrap-links/[1;33mfn[m  [32m                       links.clj:   63[m
+                                        [33mclj-http.cookies/wrap-cookies/[1;33mfn[m  [32m                     cookies.clj:  131[m
+                                          [33mclj-http.client/wrap-method/[1;33mfn[m  [32m                      client.clj:  892[m
+                           [33mclj-http.client/wrap-flatten-nested-params/[1;33mfn[m  [32m                      client.clj: 1016[m
+                                   [33mclj-http.client/wrap-nested-params/[1;33mfn[m  [32m                      client.clj:  992[m
+                                     [33mclj-http.client/wrap-form-params/[1;33mfn[m  [32m                      client.clj:  958[m
+                                    [33mclj-http.client/wrap-content-type/[1;33mfn[m  [32m                      client.clj:  717[m
+                                 [33mclj-http.client/wrap-accept-encoding/[1;33mfn[m  [32m                      client.clj:  756[m
+                                          [33mclj-http.client/wrap-accept/[1;33mfn[m  [32m                      client.clj:  734[m
+                                      [33mclj-http.client/wrap-exceptions/[1;33mfn[m  [32m                      client.clj:  262[m
+                                     [33mclj-http.client/[1;33mexceptions-response[m  [32m                      client.clj:  253[m
+                                           [33mslingshot.support/[1;33mstack-trace[m  [32m                     support.clj:  201[m
+[1;31mclojure.lang.ExceptionInfo[m: [3mclj-http: status 401[m
+                     [1mbody[m: "{\"message\":\"Bad credentials\",\"documentation_url\":\"https://docs.github.com/graphql\"}"
+                   [1mcached[m: nil
+                 [1mchunked?[m: false
+                  [1mheaders[m: {"Access-Control-Expose-Headers"
+                            "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+                            "Referrer-Policy"
+                            "origin-when-cross-origin, strict-origin-when-cross-origin",
+                            "Server" "GitHub.com",
+                            "Content-Type" "application/json; charset=utf-8",
+                            "Access-Control-Allow-Origin" "*",
+                            "X-Content-Type-Options" "nosniff",
+                            "Content-Length" "83",
+                            "X-Frame-Options" "deny",
+                            "Strict-Transport-Security"
+                            "max-age=31536000; includeSubdomains; preload",
+                            "X-RateLimit-Limit" "0",
+                            ...}
+              [1mhttp-client[m: #object[org.apache.http.impl.client.InternalHttpClient 0x58fa23dc "org.apache.http.impl.client.InternalHttpClient@58fa23dc"]
+                   [1mlength[m: 83
+    [1morig-content-encoding[m: nil
+         [1mprotocol-version[m: {:name "HTTP", :major 1, :minor 1}
+            [1mreason-phrase[m: "Unauthorized"
+              [1mrepeatable?[m: false
+             [1mrequest-time[m: 1361
+                   [1mstatus[m: 401
+               [1mstreaming?[m: true
+          [1mtrace-redirects[m: []
+                     [1mtype[m: :clj-http.client/unexceptional-status
+
+21-11-04 22:35:07 6e0d08c71689 INFO [akvo-devops-stats.cron-jobs:33] - :duct.logger.timbre/legacy ["Starting cron job to collect stats"]
+21-11-04 22:35:07 6e0d08c71689 ERROR [akvo-devops-stats.cron-jobs:?] - :duct.logger.timbre/legacy []
+                                                    [37mjava.lang.Thread.run[m  [32m                     Thread.java:  834[m
+                      [37mjava.util.concurrent.ThreadPoolExecutor$Worker.run[m  [32m         ThreadPoolExecutor.java:  628[m
+                       [37mjava.util.concurrent.ThreadPoolExecutor.runWorker[m  [32m         ThreadPoolExecutor.java: 1128[m
+[37mjava.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run[m  [32mScheduledThreadPoolExecutor.java:  305[m
+                             [37mjava.util.concurrent.FutureTask.runAndReset[m  [32m                 FutureTask.java:  305[m
+                     [37mjava.util.concurrent.Executors$RunnableAdapter.call[m  [32m                  Executors.java:  515[m
+                                                                     [37m...[m  [32m                                      [m
+                             [33makvo-devops-stats.cron-jobs/eval24809/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   37[m
+                          [33makvo-devops-stats.cron-jobs/eval24809/fn/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   38[m
+                                [33makvo-devops-stats.cron-jobs/[1;33mcollect-data[m  [32m                   cron_jobs.clj:   26[m
+                 [33makvo-devops-stats.promotions/[1;33mcollect-all-new-promotions[m  [32m                  promotions.clj:   89[m
+                 [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions-up-to[m  [32m                  promotions.clj:   66[m
+                       [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions[m  [32m                  promotions.clj:   43[m
+                           [33makvo-devops-stats.promotions/[1;33mfetch-promotions[m  [32m                  promotions.clj:   22[m
+                               [33makvo-devops-stats.promotions/[1;33mquery-github[m  [32m                  promotions.clj:   15[m
+                                                                     [37m...[m  [32m                                      [m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1187[m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1191[m
+                                                [33mclj-http.client/[1;33mrequest*[m  [32m                      client.clj: 1173[m
+                                    [33mclj-http.client/wrap-unknown-host/[1;33mfn[m  [32m                      client.clj: 1045[m
+                                            [33mclj-http.links/wrap-links/[1;33mfn[m  [32m                       links.clj:   63[m
+                                        [33mclj-http.cookies/wrap-cookies/[1;33mfn[m  [32m                     cookies.clj:  131[m
+                                          [33mclj-http.client/wrap-method/[1;33mfn[m  [32m                      client.clj:  892[m
+                           [33mclj-http.client/wrap-flatten-nested-params/[1;33mfn[m  [32m                      client.clj: 1016[m
+                                   [33mclj-http.client/wrap-nested-params/[1;33mfn[m  [32m                      client.clj:  992[m
+                                     [33mclj-http.client/wrap-form-params/[1;33mfn[m  [32m                      client.clj:  958[m
+                                    [33mclj-http.client/wrap-content-type/[1;33mfn[m  [32m                      client.clj:  717[m
+                                 [33mclj-http.client/wrap-accept-encoding/[1;33mfn[m  [32m                      client.clj:  756[m
+                                          [33mclj-http.client/wrap-accept/[1;33mfn[m  [32m                      client.clj:  734[m
+                                      [33mclj-http.client/wrap-exceptions/[1;33mfn[m  [32m                      client.clj:  262[m
+                                     [33mclj-http.client/[1;33mexceptions-response[m  [32m                      client.clj:  253[m
+                                           [33mslingshot.support/[1;33mstack-trace[m  [32m                     support.clj:  201[m
+[1;31mclojure.lang.ExceptionInfo[m: [3mclj-http: status 401[m
+                     [1mbody[m: "{\"message\":\"Bad credentials\",\"documentation_url\":\"https://docs.github.com/graphql\"}"
+                   [1mcached[m: nil
+                 [1mchunked?[m: false
+                  [1mheaders[m: {"Access-Control-Expose-Headers"
+                            "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+                            "Referrer-Policy"
+                            "origin-when-cross-origin, strict-origin-when-cross-origin",
+                            "Server" "GitHub.com",
+                            "Content-Type" "application/json; charset=utf-8",
+                            "Access-Control-Allow-Origin" "*",
+                            "X-Content-Type-Options" "nosniff",
+                            "Content-Length" "83",
+                            "X-Frame-Options" "deny",
+                            "Strict-Transport-Security"
+                            "max-age=31536000; includeSubdomains; preload",
+                            "X-RateLimit-Limit" "0",
+                            ...}
+              [1mhttp-client[m: #object[org.apache.http.impl.client.InternalHttpClient 0x2967c0e1 "org.apache.http.impl.client.InternalHttpClient@2967c0e1"]
+                   [1mlength[m: 83
+    [1morig-content-encoding[m: nil
+         [1mprotocol-version[m: {:name "HTTP", :major 1, :minor 1}
+            [1mreason-phrase[m: "Unauthorized"
+              [1mrepeatable?[m: false
+             [1mrequest-time[m: 275
+                   [1mstatus[m: 401
+               [1mstreaming?[m: true
+          [1mtrace-redirects[m: []
+                     [1mtype[m: :clj-http.client/unexceptional-status
+
+21-11-04 22:35:42 6e0d08c71689 REPORT [duct.server.http.jetty:21] - :duct.server.http.jetty/stopping-server
+21-11-04 22:35:42 6e0d08c71689 INFO [akvo-devops-stats.cron-jobs:33] - :duct.logger.timbre/legacy ["Starting cron job to collect stats"]
+21-11-04 22:35:42 6e0d08c71689 REPORT [duct.server.http.jetty:13] - :duct.server.http.jetty/starting-server {:port 3000}
+21-11-04 22:35:42 6e0d08c71689 ERROR [akvo-devops-stats.cron-jobs:?] - :duct.logger.timbre/legacy []
+                                                    [37mjava.lang.Thread.run[m  [32m                     Thread.java:  834[m
+                      [37mjava.util.concurrent.ThreadPoolExecutor$Worker.run[m  [32m         ThreadPoolExecutor.java:  628[m
+                       [37mjava.util.concurrent.ThreadPoolExecutor.runWorker[m  [32m         ThreadPoolExecutor.java: 1128[m
+[37mjava.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run[m  [32mScheduledThreadPoolExecutor.java:  305[m
+                             [37mjava.util.concurrent.FutureTask.runAndReset[m  [32m                 FutureTask.java:  305[m
+                     [37mjava.util.concurrent.Executors$RunnableAdapter.call[m  [32m                  Executors.java:  515[m
+                                                                     [37m...[m  [32m                                      [m
+                             [33makvo-devops-stats.cron-jobs/eval24809/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   37[m
+                          [33makvo-devops-stats.cron-jobs/eval24809/fn/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   38[m
+                                [33makvo-devops-stats.cron-jobs/[1;33mcollect-data[m  [32m                   cron_jobs.clj:   26[m
+                 [33makvo-devops-stats.promotions/[1;33mcollect-all-new-promotions[m  [32m                  promotions.clj:   89[m
+                 [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions-up-to[m  [32m                  promotions.clj:   66[m
+                       [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions[m  [32m                  promotions.clj:   43[m
+                           [33makvo-devops-stats.promotions/[1;33mfetch-promotions[m  [32m                  promotions.clj:   22[m
+                               [33makvo-devops-stats.promotions/[1;33mquery-github[m  [32m                  promotions.clj:   15[m
+                                                                     [37m...[m  [32m                                      [m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1187[m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1191[m
+                                                [33mclj-http.client/[1;33mrequest*[m  [32m                      client.clj: 1173[m
+                                    [33mclj-http.client/wrap-unknown-host/[1;33mfn[m  [32m                      client.clj: 1045[m
+                                            [33mclj-http.links/wrap-links/[1;33mfn[m  [32m                       links.clj:   63[m
+                                        [33mclj-http.cookies/wrap-cookies/[1;33mfn[m  [32m                     cookies.clj:  131[m
+                                          [33mclj-http.client/wrap-method/[1;33mfn[m  [32m                      client.clj:  892[m
+                           [33mclj-http.client/wrap-flatten-nested-params/[1;33mfn[m  [32m                      client.clj: 1016[m
+                                   [33mclj-http.client/wrap-nested-params/[1;33mfn[m  [32m                      client.clj:  992[m
+                                     [33mclj-http.client/wrap-form-params/[1;33mfn[m  [32m                      client.clj:  958[m
+                                    [33mclj-http.client/wrap-content-type/[1;33mfn[m  [32m                      client.clj:  717[m
+                                 [33mclj-http.client/wrap-accept-encoding/[1;33mfn[m  [32m                      client.clj:  756[m
+                                          [33mclj-http.client/wrap-accept/[1;33mfn[m  [32m                      client.clj:  734[m
+                                      [33mclj-http.client/wrap-exceptions/[1;33mfn[m  [32m                      client.clj:  262[m
+                                     [33mclj-http.client/[1;33mexceptions-response[m  [32m                      client.clj:  253[m
+                                           [33mslingshot.support/[1;33mstack-trace[m  [32m                     support.clj:  201[m
+[1;31mclojure.lang.ExceptionInfo[m: [3mclj-http: status 401[m
+                     [1mbody[m: "{\"message\":\"Bad credentials\",\"documentation_url\":\"https://docs.github.com/graphql\"}"
+                   [1mcached[m: nil
+                 [1mchunked?[m: false
+                  [1mheaders[m: {"Access-Control-Expose-Headers"
+                            "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+                            "Referrer-Policy"
+                            "origin-when-cross-origin, strict-origin-when-cross-origin",
+                            "Server" "GitHub.com",
+                            "Content-Type" "application/json; charset=utf-8",
+                            "Access-Control-Allow-Origin" "*",
+                            "X-Content-Type-Options" "nosniff",
+                            "Content-Length" "83",
+                            "X-Frame-Options" "deny",
+                            "Strict-Transport-Security"
+                            "max-age=31536000; includeSubdomains; preload",
+                            "X-RateLimit-Limit" "0",
+                            ...}
+              [1mhttp-client[m: #object[org.apache.http.impl.client.InternalHttpClient 0x56676023 "org.apache.http.impl.client.InternalHttpClient@56676023"]
+                   [1mlength[m: 83
+    [1morig-content-encoding[m: nil
+         [1mprotocol-version[m: {:name "HTTP", :major 1, :minor 1}
+            [1mreason-phrase[m: "Unauthorized"
+              [1mrepeatable?[m: false
+             [1mrequest-time[m: 293
+                   [1mstatus[m: 401
+               [1mstreaming?[m: true
+          [1mtrace-redirects[m: []
+                     [1mtype[m: :clj-http.client/unexceptional-status
+
+21-11-04 22:35:58 6e0d08c71689 INFO [akvo-devops-stats.cron-jobs:33] - :duct.logger.timbre/legacy ["Starting cron job to collect stats"]
+21-11-04 22:35:58 6e0d08c71689 ERROR [akvo-devops-stats.cron-jobs:?] - :duct.logger.timbre/legacy []
+                                                    [37mjava.lang.Thread.run[m  [32m                     Thread.java:  834[m
+                      [37mjava.util.concurrent.ThreadPoolExecutor$Worker.run[m  [32m         ThreadPoolExecutor.java:  628[m
+                       [37mjava.util.concurrent.ThreadPoolExecutor.runWorker[m  [32m         ThreadPoolExecutor.java: 1128[m
+[37mjava.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run[m  [32mScheduledThreadPoolExecutor.java:  305[m
+                             [37mjava.util.concurrent.FutureTask.runAndReset[m  [32m                 FutureTask.java:  305[m
+                     [37mjava.util.concurrent.Executors$RunnableAdapter.call[m  [32m                  Executors.java:  515[m
+                                                                     [37m...[m  [32m                                      [m
+                             [33makvo-devops-stats.cron-jobs/eval24809/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   37[m
+                          [33makvo-devops-stats.cron-jobs/eval24809/fn/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   38[m
+                                [33makvo-devops-stats.cron-jobs/[1;33mcollect-data[m  [32m                   cron_jobs.clj:   26[m
+                 [33makvo-devops-stats.promotions/[1;33mcollect-all-new-promotions[m  [32m                  promotions.clj:   89[m
+                 [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions-up-to[m  [32m                  promotions.clj:   66[m
+                       [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions[m  [32m                  promotions.clj:   43[m
+                           [33makvo-devops-stats.promotions/[1;33mfetch-promotions[m  [32m                  promotions.clj:   22[m
+                               [33makvo-devops-stats.promotions/[1;33mquery-github[m  [32m                  promotions.clj:   15[m
+                                                                     [37m...[m  [32m                                      [m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1187[m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1191[m
+                                                [33mclj-http.client/[1;33mrequest*[m  [32m                      client.clj: 1173[m
+                                    [33mclj-http.client/wrap-unknown-host/[1;33mfn[m  [32m                      client.clj: 1045[m
+                                            [33mclj-http.links/wrap-links/[1;33mfn[m  [32m                       links.clj:   63[m
+                                        [33mclj-http.cookies/wrap-cookies/[1;33mfn[m  [32m                     cookies.clj:  131[m
+                                          [33mclj-http.client/wrap-method/[1;33mfn[m  [32m                      client.clj:  892[m
+                           [33mclj-http.client/wrap-flatten-nested-params/[1;33mfn[m  [32m                      client.clj: 1016[m
+                                   [33mclj-http.client/wrap-nested-params/[1;33mfn[m  [32m                      client.clj:  992[m
+                                     [33mclj-http.client/wrap-form-params/[1;33mfn[m  [32m                      client.clj:  958[m
+                                    [33mclj-http.client/wrap-content-type/[1;33mfn[m  [32m                      client.clj:  717[m
+                                 [33mclj-http.client/wrap-accept-encoding/[1;33mfn[m  [32m                      client.clj:  756[m
+                                          [33mclj-http.client/wrap-accept/[1;33mfn[m  [32m                      client.clj:  734[m
+                                      [33mclj-http.client/wrap-exceptions/[1;33mfn[m  [32m                      client.clj:  262[m
+                                     [33mclj-http.client/[1;33mexceptions-response[m  [32m                      client.clj:  253[m
+                                           [33mslingshot.support/[1;33mstack-trace[m  [32m                     support.clj:  201[m
+[1;31mclojure.lang.ExceptionInfo[m: [3mclj-http: status 401[m
+                     [1mbody[m: "{\"message\":\"Bad credentials\",\"documentation_url\":\"https://docs.github.com/graphql\"}"
+                   [1mcached[m: nil
+                 [1mchunked?[m: false
+                  [1mheaders[m: {"Access-Control-Expose-Headers"
+                            "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+                            "Referrer-Policy"
+                            "origin-when-cross-origin, strict-origin-when-cross-origin",
+                            "Server" "GitHub.com",
+                            "Content-Type" "application/json; charset=utf-8",
+                            "Access-Control-Allow-Origin" "*",
+                            "X-Content-Type-Options" "nosniff",
+                            "Content-Length" "83",
+                            "X-Frame-Options" "deny",
+                            "Strict-Transport-Security"
+                            "max-age=31536000; includeSubdomains; preload",
+                            "X-RateLimit-Limit" "0",
+                            ...}
+              [1mhttp-client[m: #object[org.apache.http.impl.client.InternalHttpClient 0xad8e63e "org.apache.http.impl.client.InternalHttpClient@ad8e63e"]
+                   [1mlength[m: 83
+    [1morig-content-encoding[m: nil
+         [1mprotocol-version[m: {:name "HTTP", :major 1, :minor 1}
+            [1mreason-phrase[m: "Unauthorized"
+              [1mrepeatable?[m: false
+             [1mrequest-time[m: 262
+                   [1mstatus[m: 401
+               [1mstreaming?[m: true
+          [1mtrace-redirects[m: []
+                     [1mtype[m: :clj-http.client/unexceptional-status
+
+21-11-04 22:37:16 6e0d08c71689 INFO [akvo-devops-stats.cron-jobs:34] - :duct.logger.timbre/legacy ["Starting cron job to collect stats"]
+21-11-04 22:37:17 6e0d08c71689 ERROR [akvo-devops-stats.cron-jobs:?] - :duct.logger.timbre/legacy []
+                                                    [37mjava.lang.Thread.run[m  [32m                     Thread.java:  834[m
+                      [37mjava.util.concurrent.ThreadPoolExecutor$Worker.run[m  [32m         ThreadPoolExecutor.java:  628[m
+                       [37mjava.util.concurrent.ThreadPoolExecutor.runWorker[m  [32m         ThreadPoolExecutor.java: 1128[m
+[37mjava.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run[m  [32mScheduledThreadPoolExecutor.java:  305[m
+                             [37mjava.util.concurrent.FutureTask.runAndReset[m  [32m                 FutureTask.java:  305[m
+                     [37mjava.util.concurrent.Executors$RunnableAdapter.call[m  [32m                  Executors.java:  515[m
+                                                                     [37m...[m  [32m                                      [m
+                             [33makvo-devops-stats.cron-jobs/eval24965/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   38[m
+                          [33makvo-devops-stats.cron-jobs/eval24965/fn/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   39[m
+                                [33makvo-devops-stats.cron-jobs/[1;33mcollect-data[m  [32m                   cron_jobs.clj:   26[m
+                 [33makvo-devops-stats.promotions/[1;33mcollect-all-new-promotions[m  [32m                  promotions.clj:   89[m
+                 [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions-up-to[m  [32m                  promotions.clj:   66[m
+                       [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions[m  [32m                  promotions.clj:   43[m
+                           [33makvo-devops-stats.promotions/[1;33mfetch-promotions[m  [32m                  promotions.clj:   22[m
+                               [33makvo-devops-stats.promotions/[1;33mquery-github[m  [32m                  promotions.clj:   15[m
+                                                                     [37m...[m  [32m                                      [m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1187[m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1191[m
+                                                [33mclj-http.client/[1;33mrequest*[m  [32m                      client.clj: 1173[m
+                                    [33mclj-http.client/wrap-unknown-host/[1;33mfn[m  [32m                      client.clj: 1045[m
+                                            [33mclj-http.links/wrap-links/[1;33mfn[m  [32m                       links.clj:   63[m
+                                        [33mclj-http.cookies/wrap-cookies/[1;33mfn[m  [32m                     cookies.clj:  131[m
+                                          [33mclj-http.client/wrap-method/[1;33mfn[m  [32m                      client.clj:  892[m
+                           [33mclj-http.client/wrap-flatten-nested-params/[1;33mfn[m  [32m                      client.clj: 1016[m
+                                   [33mclj-http.client/wrap-nested-params/[1;33mfn[m  [32m                      client.clj:  992[m
+                                     [33mclj-http.client/wrap-form-params/[1;33mfn[m  [32m                      client.clj:  958[m
+                                    [33mclj-http.client/wrap-content-type/[1;33mfn[m  [32m                      client.clj:  717[m
+                                 [33mclj-http.client/wrap-accept-encoding/[1;33mfn[m  [32m                      client.clj:  756[m
+                                          [33mclj-http.client/wrap-accept/[1;33mfn[m  [32m                      client.clj:  734[m
+                                      [33mclj-http.client/wrap-exceptions/[1;33mfn[m  [32m                      client.clj:  262[m
+                                     [33mclj-http.client/[1;33mexceptions-response[m  [32m                      client.clj:  253[m
+                                           [33mslingshot.support/[1;33mstack-trace[m  [32m                     support.clj:  201[m
+[1;31mclojure.lang.ExceptionInfo[m: [3mclj-http: status 401[m
+                     [1mbody[m: "{\"message\":\"Bad credentials\",\"documentation_url\":\"https://docs.github.com/graphql\"}"
+                   [1mcached[m: nil
+                 [1mchunked?[m: false
+                  [1mheaders[m: {"Access-Control-Expose-Headers"
+                            "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+                            "Referrer-Policy"
+                            "origin-when-cross-origin, strict-origin-when-cross-origin",
+                            "Server" "GitHub.com",
+                            "Content-Type" "application/json; charset=utf-8",
+                            "Access-Control-Allow-Origin" "*",
+                            "X-Content-Type-Options" "nosniff",
+                            "Content-Length" "83",
+                            "X-Frame-Options" "deny",
+                            "Strict-Transport-Security"
+                            "max-age=31536000; includeSubdomains; preload",
+                            "X-RateLimit-Limit" "0",
+                            ...}
+              [1mhttp-client[m: #object[org.apache.http.impl.client.InternalHttpClient 0x5fa7c9dc "org.apache.http.impl.client.InternalHttpClient@5fa7c9dc"]
+                   [1mlength[m: 83
+    [1morig-content-encoding[m: nil
+         [1mprotocol-version[m: {:name "HTTP", :major 1, :minor 1}
+            [1mreason-phrase[m: "Unauthorized"
+              [1mrepeatable?[m: false
+             [1mrequest-time[m: 277
+                   [1mstatus[m: 401
+               [1mstreaming?[m: true
+          [1mtrace-redirects[m: []
+                     [1mtype[m: :clj-http.client/unexceptional-status
+
+21-11-04 22:37:39 6e0d08c71689 INFO [akvo-devops-stats.cron-jobs:34] - :duct.logger.timbre/legacy ["Starting cron job to collect stats"]
+21-11-04 22:37:42 6e0d08c71689 INFO [akvo-devops-stats.cron-jobs:34] - :duct.logger.timbre/legacy ["Starting cron job to collect stats"]
+21-11-04 22:37:42 6e0d08c71689 INFO [akvo-devops-stats.cron-jobs:34] - :duct.logger.timbre/legacy ["Starting cron job to collect stats"]
+21-11-04 22:37:42 6e0d08c71689 INFO [akvo-devops-stats.cron-jobs:34] - :duct.logger.timbre/legacy ["Starting cron job to collect stats"]
+21-11-04 22:37:42 6e0d08c71689 INFO [akvo-devops-stats.cron-jobs:34] - :duct.logger.timbre/legacy ["Starting cron job to collect stats"]
+21-11-04 22:37:53 6e0d08c71689 ERROR [akvo-devops-stats.cron-jobs:34] - :duct.logger.timbre/legacy ["Starting cron job to collect stats"]
+21-11-04 22:38:58 6e0d08c71689 ERROR [akvo-devops-stats.cron-jobs:?] - :duct.logger.timbre/legacy []
+                                                    [37mjava.lang.Thread.run[m  [32m                     Thread.java:  834[m
+                      [37mjava.util.concurrent.ThreadPoolExecutor$Worker.run[m  [32m         ThreadPoolExecutor.java:  628[m
+                       [37mjava.util.concurrent.ThreadPoolExecutor.runWorker[m  [32m         ThreadPoolExecutor.java: 1128[m
+[37mjava.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run[m  [32mScheduledThreadPoolExecutor.java:  305[m
+                             [37mjava.util.concurrent.FutureTask.runAndReset[m  [32m                 FutureTask.java:  305[m
+                     [37mjava.util.concurrent.Executors$RunnableAdapter.call[m  [32m                  Executors.java:  515[m
+                                                                     [37m...[m  [32m                                      [m
+                             [33makvo-devops-stats.cron-jobs/eval25091/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   36[m
+                          [33makvo-devops-stats.cron-jobs/eval25091/fn/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   37[m
+                                [33makvo-devops-stats.cron-jobs/[1;33mcollect-data[m  [32m                   cron_jobs.clj:   26[m
+                 [33makvo-devops-stats.promotions/[1;33mcollect-all-new-promotions[m  [32m                  promotions.clj:   89[m
+                 [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions-up-to[m  [32m                  promotions.clj:   66[m
+                       [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions[m  [32m                  promotions.clj:   43[m
+                           [33makvo-devops-stats.promotions/[1;33mfetch-promotions[m  [32m                  promotions.clj:   22[m
+                               [33makvo-devops-stats.promotions/[1;33mquery-github[m  [32m                  promotions.clj:   15[m
+                                                                     [37m...[m  [32m                                      [m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1187[m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1191[m
+                                                [33mclj-http.client/[1;33mrequest*[m  [32m                      client.clj: 1173[m
+                                    [33mclj-http.client/wrap-unknown-host/[1;33mfn[m  [32m                      client.clj: 1045[m
+                                            [33mclj-http.links/wrap-links/[1;33mfn[m  [32m                       links.clj:   63[m
+                                        [33mclj-http.cookies/wrap-cookies/[1;33mfn[m  [32m                     cookies.clj:  131[m
+                                          [33mclj-http.client/wrap-method/[1;33mfn[m  [32m                      client.clj:  892[m
+                           [33mclj-http.client/wrap-flatten-nested-params/[1;33mfn[m  [32m                      client.clj: 1016[m
+                                   [33mclj-http.client/wrap-nested-params/[1;33mfn[m  [32m                      client.clj:  992[m
+                                     [33mclj-http.client/wrap-form-params/[1;33mfn[m  [32m                      client.clj:  958[m
+                                    [33mclj-http.client/wrap-content-type/[1;33mfn[m  [32m                      client.clj:  717[m
+                                 [33mclj-http.client/wrap-accept-encoding/[1;33mfn[m  [32m                      client.clj:  756[m
+                                          [33mclj-http.client/wrap-accept/[1;33mfn[m  [32m                      client.clj:  734[m
+                                      [33mclj-http.client/wrap-exceptions/[1;33mfn[m  [32m                      client.clj:  262[m
+                                     [33mclj-http.client/[1;33mexceptions-response[m  [32m                      client.clj:  253[m
+                                           [33mslingshot.support/[1;33mstack-trace[m  [32m                     support.clj:  201[m
+[1;31mclojure.lang.ExceptionInfo[m: [3mclj-http: status 401[m
+                     [1mbody[m: "{\"message\":\"Bad credentials\",\"documentation_url\":\"https://docs.github.com/graphql\"}"
+                   [1mcached[m: nil
+                 [1mchunked?[m: false
+                  [1mheaders[m: {"Access-Control-Expose-Headers"
+                            "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+                            "Referrer-Policy"
+                            "origin-when-cross-origin, strict-origin-when-cross-origin",
+                            "Server" "GitHub.com",
+                            "Content-Type" "application/json; charset=utf-8",
+                            "Access-Control-Allow-Origin" "*",
+                            "X-Content-Type-Options" "nosniff",
+                            "Content-Length" "83",
+                            "X-Frame-Options" "deny",
+                            "Strict-Transport-Security"
+                            "max-age=31536000; includeSubdomains; preload",
+                            "X-RateLimit-Limit" "0",
+                            ...}
+              [1mhttp-client[m: #object[org.apache.http.impl.client.InternalHttpClient 0x70cf6ccc "org.apache.http.impl.client.InternalHttpClient@70cf6ccc"]
+                   [1mlength[m: 83
+    [1morig-content-encoding[m: nil
+         [1mprotocol-version[m: {:name "HTTP", :major 1, :minor 1}
+            [1mreason-phrase[m: "Unauthorized"
+              [1mrepeatable?[m: false
+             [1mrequest-time[m: 1283
+                   [1mstatus[m: 401
+               [1mstreaming?[m: true
+          [1mtrace-redirects[m: []
+                     [1mtype[m: :clj-http.client/unexceptional-status
+
+21-11-04 22:49:48 82bc54c8ad5d REPORT [duct.migrator.ragtime:14] - :duct.migrator.ragtime/applying 00001-commits
+21-11-04 22:49:48 82bc54c8ad5d REPORT [duct.migrator.ragtime:14] - :duct.migrator.ragtime/applying 00002-promotions
+21-11-04 22:49:48 82bc54c8ad5d REPORT [duct.migrator.ragtime:14] - :duct.migrator.ragtime/applying 00003-flips
+21-11-04 22:49:48 82bc54c8ad5d INFO [akvo-devops-stats.cron-jobs:33] - :duct.logger.timbre/legacy ["Starting cron job to collect stats"]
+21-11-04 22:49:48 82bc54c8ad5d REPORT [duct.server.http.jetty:13] - :duct.server.http.jetty/starting-server {:port 3000}
+21-11-04 22:49:50 82bc54c8ad5d ERROR [akvo-devops-stats.cron-jobs:?] - :duct.logger.timbre/legacy []
+                                                    [37mjava.lang.Thread.run[m  [32m                     Thread.java:  834[m
+                      [37mjava.util.concurrent.ThreadPoolExecutor$Worker.run[m  [32m         ThreadPoolExecutor.java:  628[m
+                       [37mjava.util.concurrent.ThreadPoolExecutor.runWorker[m  [32m         ThreadPoolExecutor.java: 1128[m
+[37mjava.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run[m  [32mScheduledThreadPoolExecutor.java:  305[m
+                             [37mjava.util.concurrent.FutureTask.runAndReset[m  [32m                 FutureTask.java:  305[m
+                     [37mjava.util.concurrent.Executors$RunnableAdapter.call[m  [32m                  Executors.java:  515[m
+                                                                     [37m...[m  [32m                                      [m
+                             [33makvo-devops-stats.cron-jobs/eval18015/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   37[m
+                          [33makvo-devops-stats.cron-jobs/eval18015/fn/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   38[m
+                                [33makvo-devops-stats.cron-jobs/[1;33mcollect-data[m  [32m                   cron_jobs.clj:   26[m
+                 [33makvo-devops-stats.promotions/[1;33mcollect-all-new-promotions[m  [32m                  promotions.clj:   89[m
+                 [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions-up-to[m  [32m                  promotions.clj:   66[m
+                       [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions[m  [32m                  promotions.clj:   43[m
+                           [33makvo-devops-stats.promotions/[1;33mfetch-promotions[m  [32m                  promotions.clj:   22[m
+                               [33makvo-devops-stats.promotions/[1;33mquery-github[m  [32m                  promotions.clj:   15[m
+                                                                     [37m...[m  [32m                                      [m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1187[m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1191[m
+                                                [33mclj-http.client/[1;33mrequest*[m  [32m                      client.clj: 1173[m
+                                    [33mclj-http.client/wrap-unknown-host/[1;33mfn[m  [32m                      client.clj: 1045[m
+                                            [33mclj-http.links/wrap-links/[1;33mfn[m  [32m                       links.clj:   63[m
+                                        [33mclj-http.cookies/wrap-cookies/[1;33mfn[m  [32m                     cookies.clj:  131[m
+                                          [33mclj-http.client/wrap-method/[1;33mfn[m  [32m                      client.clj:  892[m
+                           [33mclj-http.client/wrap-flatten-nested-params/[1;33mfn[m  [32m                      client.clj: 1016[m
+                                   [33mclj-http.client/wrap-nested-params/[1;33mfn[m  [32m                      client.clj:  992[m
+                                     [33mclj-http.client/wrap-form-params/[1;33mfn[m  [32m                      client.clj:  958[m
+                                    [33mclj-http.client/wrap-content-type/[1;33mfn[m  [32m                      client.clj:  717[m
+                                 [33mclj-http.client/wrap-accept-encoding/[1;33mfn[m  [32m                      client.clj:  756[m
+                                          [33mclj-http.client/wrap-accept/[1;33mfn[m  [32m                      client.clj:  734[m
+                                      [33mclj-http.client/wrap-exceptions/[1;33mfn[m  [32m                      client.clj:  262[m
+                                     [33mclj-http.client/[1;33mexceptions-response[m  [32m                      client.clj:  253[m
+                                           [33mslingshot.support/[1;33mstack-trace[m  [32m                     support.clj:  201[m
+[1;31mclojure.lang.ExceptionInfo[m: [3mclj-http: status 401[m
+                     [1mbody[m: "{\"message\":\"Bad credentials\",\"documentation_url\":\"https://docs.github.com/graphql\"}"
+                   [1mcached[m: nil
+                 [1mchunked?[m: false
+                  [1mheaders[m: {"Access-Control-Expose-Headers"
+                            "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+                            "Referrer-Policy"
+                            "origin-when-cross-origin, strict-origin-when-cross-origin",
+                            "Server" "GitHub.com",
+                            "Content-Type" "application/json; charset=utf-8",
+                            "Access-Control-Allow-Origin" "*",
+                            "X-Content-Type-Options" "nosniff",
+                            "Content-Length" "83",
+                            "X-Frame-Options" "deny",
+                            "Strict-Transport-Security"
+                            "max-age=31536000; includeSubdomains; preload",
+                            "X-RateLimit-Limit" "0",
+                            ...}
+              [1mhttp-client[m: #object[org.apache.http.impl.client.InternalHttpClient 0x2c7b198b "org.apache.http.impl.client.InternalHttpClient@2c7b198b"]
+                   [1mlength[m: 83
+    [1morig-content-encoding[m: nil
+         [1mprotocol-version[m: {:name "HTTP", :major 1, :minor 1}
+            [1mreason-phrase[m: "Unauthorized"
+              [1mrepeatable?[m: false
+             [1mrequest-time[m: 1212
+                   [1mstatus[m: 401
+               [1mstreaming?[m: true
+          [1mtrace-redirects[m: []
+                     [1mtype[m: :clj-http.client/unexceptional-status
+
+21-11-04 22:50:04 82bc54c8ad5d REPORT [duct.migrator.ragtime:15] - :duct.migrator.ragtime/rolling-back 00002-promotions
+21-11-04 22:50:04 82bc54c8ad5d REPORT [duct.migrator.ragtime:15] - :duct.migrator.ragtime/rolling-back 00003-flips
+21-11-04 22:50:04 82bc54c8ad5d REPORT [duct.migrator.ragtime:14] - :duct.migrator.ragtime/applying 00002-promotions
+21-11-04 22:50:04 82bc54c8ad5d REPORT [duct.migrator.ragtime:14] - :duct.migrator.ragtime/applying 00003-flips
+21-11-04 22:50:04 82bc54c8ad5d INFO [akvo-devops-stats.cron-jobs:33] - :duct.logger.timbre/legacy ["Starting cron job to collect stats"]
+21-11-04 22:50:04 82bc54c8ad5d ERROR [akvo-devops-stats.cron-jobs:?] - :duct.logger.timbre/legacy []
+                                                    [37mjava.lang.Thread.run[m  [32m                     Thread.java:  834[m
+                      [37mjava.util.concurrent.ThreadPoolExecutor$Worker.run[m  [32m         ThreadPoolExecutor.java:  628[m
+                       [37mjava.util.concurrent.ThreadPoolExecutor.runWorker[m  [32m         ThreadPoolExecutor.java: 1128[m
+[37mjava.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run[m  [32mScheduledThreadPoolExecutor.java:  305[m
+                             [37mjava.util.concurrent.FutureTask.runAndReset[m  [32m                 FutureTask.java:  305[m
+                     [37mjava.util.concurrent.Executors$RunnableAdapter.call[m  [32m                  Executors.java:  515[m
+                                                                     [37m...[m  [32m                                      [m
+                             [33makvo-devops-stats.cron-jobs/eval24812/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   37[m
+                          [33makvo-devops-stats.cron-jobs/eval24812/fn/fn/[1;33mfn[m  [32m                   cron_jobs.clj:   38[m
+                                [33makvo-devops-stats.cron-jobs/[1;33mcollect-data[m  [32m                   cron_jobs.clj:   26[m
+                 [33makvo-devops-stats.promotions/[1;33mcollect-all-new-promotions[m  [32m                  promotions.clj:   89[m
+                 [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions-up-to[m  [32m                  promotions.clj:   66[m
+                       [33makvo-devops-stats.promotions/[1;33mfetch-all-promotions[m  [32m                  promotions.clj:   43[m
+                           [33makvo-devops-stats.promotions/[1;33mfetch-promotions[m  [32m                  promotions.clj:   22[m
+                               [33makvo-devops-stats.promotions/[1;33mquery-github[m  [32m                  promotions.clj:   15[m
+                                                                     [37m...[m  [32m                                      [m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1187[m
+                                                    [33mclj-http.client/[1;33mpost[m  [32m                      client.clj: 1191[m
+                                                [33mclj-http.client/[1;33mrequest*[m  [32m                      client.clj: 1173[m
+                                    [33mclj-http.client/wrap-unknown-host/[1;33mfn[m  [32m                      client.clj: 1045[m
+                                            [33mclj-http.links/wrap-links/[1;33mfn[m  [32m                       links.clj:   63[m
+                                        [33mclj-http.cookies/wrap-cookies/[1;33mfn[m  [32m                     cookies.clj:  131[m
+                                          [33mclj-http.client/wrap-method/[1;33mfn[m  [32m                      client.clj:  892[m
+                           [33mclj-http.client/wrap-flatten-nested-params/[1;33mfn[m  [32m                      client.clj: 1016[m
+                                   [33mclj-http.client/wrap-nested-params/[1;33mfn[m  [32m                      client.clj:  992[m
+                                     [33mclj-http.client/wrap-form-params/[1;33mfn[m  [32m                      client.clj:  958[m
+                                    [33mclj-http.client/wrap-content-type/[1;33mfn[m  [32m                      client.clj:  717[m
+                                 [33mclj-http.client/wrap-accept-encoding/[1;33mfn[m  [32m                      client.clj:  756[m
+                                          [33mclj-http.client/wrap-accept/[1;33mfn[m  [32m                      client.clj:  734[m
+                                      [33mclj-http.client/wrap-exceptions/[1;33mfn[m  [32m                      client.clj:  262[m
+                                     [33mclj-http.client/[1;33mexceptions-response[m  [32m                      client.clj:  253[m
+                                           [33mslingshot.support/[1;33mstack-trace[m  [32m                     support.clj:  201[m
+[1;31mclojure.lang.ExceptionInfo[m: [3mclj-http: status 401[m
+                     [1mbody[m: "{\"message\":\"Bad credentials\",\"documentation_url\":\"https://docs.github.com/graphql\"}"
+                   [1mcached[m: nil
+                 [1mchunked?[m: false
+                  [1mheaders[m: {"Access-Control-Expose-Headers"
+                            "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+                            "Referrer-Policy"
+                            "origin-when-cross-origin, strict-origin-when-cross-origin",
+                            "Server" "GitHub.com",
+                            "Content-Type" "application/json; charset=utf-8",
+                            "Access-Control-Allow-Origin" "*",
+                            "X-Content-Type-Options" "nosniff",
+                            "Content-Length" "83",
+                            "X-Frame-Options" "deny",
+                            "Strict-Transport-Security"
+                            "max-age=31536000; includeSubdomains; preload",
+                            "X-RateLimit-Limit" "0",
+                            ...}
+              [1mhttp-client[m: #object[org.apache.http.impl.client.InternalHttpClient 0x1da88baf "org.apache.http.impl.client.InternalHttpClient@1da88baf"]
+                   [1mlength[m: 83
+    [1morig-content-encoding[m: nil
+         [1mprotocol-version[m: {:name "HTTP", :major 1, :minor 1}
+            [1mreason-phrase[m: "Unauthorized"
+              [1mrepeatable?[m: false
+             [1mrequest-time[m: 288
+                   [1mstatus[m: 401
+               [1mstreaming?[m: true
+          [1mtrace-redirects[m: []
+                     [1mtype[m: :clj-http.client/unexceptional-status
+
